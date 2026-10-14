@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <ItemGroup><Reference Include="SoulsFormats"><HintPath>$(SoulsFormatsDll)</HintPath></Reference></ItemGroup>
+  <!-- A direct assembly reference does not propagate SoulsFormats package dependencies. -->
+  <ItemGroup>
+    <PackageReference Include="ZstdSharp.Port" Version="0.8.1" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+  </ItemGroup>
+  <Target Name="RequireDependencies" BeforeTargets="ResolveReferences" Condition="!Exists('$(SoulsFormatsDll)')"><Error Text="Set SoulsFormatsDll to the local SoulsFormats assembly." /></Target>
+</Project>

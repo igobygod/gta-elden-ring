@@ -1,0 +1,22 @@
+#pragma once
+#include "../../polish-v4.5/sword/sword_carry.h"
+namespace sword_attack {
+// Original closed GTA finger-chain center relative to PH_R_Hand. The original
+// sword's cylindrical handle extends along model Y, with its guard near Y=-.075.
+struct GripPoint { float y; arsenal::V p; };
+inline GripPoint gripPoint(const arsenal::M& m) {
+ constexpr arsenal::V palm={@PALM@};
+ float y=(palm.x-m.v[3])*m.v[1]+(palm.y-m.v[7])*m.v[5]+(palm.z-m.v[11])*m.v[9];
+ y=std::max(-.025f,std::min(.14f,y));
+ return {y,{m.v[3]+m.v[1]*y,m.v[7]+m.v[5]*y,m.v[11]+m.v[9]*y}};
+}
+inline arsenal::M blendAttachment(const arsenal::M& a,const arsenal::M& b,float u) {
+ // Keep both native endpoints exact; only blend around the grip, never the tip.
+ if(u<=0)return a;if(u>=1)return b;
+ auto m=sword_carry::blendAttachment(a,b,u);
+ auto ga=gripPoint(a),gb=gripPoint(b);float y=ga.y+(gb.y-ga.y)*u;
+ auto p=arsenal::mix(ga.p,gb.p,u);
+ m.v[3]=p.x-m.v[1]*y;m.v[7]=p.y-m.v[5]*y;m.v[11]=p.z-m.v[9]*y;
+ return m;
+}
+}

@@ -1,0 +1,586 @@
+[
+  {
+    "path": "Bridge/vendor/er-reference/LICENSE",
+    "sha256": "2517a8a462963709c905cb61d95c643d69ac2033eb97d58524e3819332e9f481"
+  },
+  {
+    "path": "Bridge/vendor/er-reference/include/bridge_protocol.h",
+    "sha256": "77434b5a17b895afe5e9fdf111ca396923ace85c31c98bbc5d0c62918c4b5db9"
+  },
+  {
+    "path": "Bridge/vendor/er-reference/src/common.h",
+    "sha256": "df3dcdad06e7b9837016dfb371088e89058960304e1f344dd79f030dfc96be1f"
+  },
+  {
+    "path": "Bridge/vendor/er-reference/src/memutil.cpp",
+    "sha256": "39e590f72d3f9d952e99e69e61f200b600c913a20126ce3ffa1bba3276e89b8a"
+  },
+  {
+    "path": "NativePort/combat-source/native/dummy_matrix.hpp",
+    "sha256": "3d15007deec4c45b16e5ca24da3181bf350d87451102d9c37d223eaa31ee00e7"
+  },
+  {
+    "path": "NativePort/combat-source/native/effects.h",
+    "sha256": "8c63f2651dbbe72e6d9e838747258db14d8684d77e93a803fe99d4d12090abbc"
+  },
+  {
+    "path": "NativePort/combat-source/native/facing_math.h",
+    "sha256": "c6636521f82ba52fb0df7535b0e4d34c77373a43f321c02c409486e8c6cd3426"
+  },
+  {
+    "path": "NativePort/combat-source/native/fx_projection.h",
+    "sha256": "9d4c5e9d50f0362fa4e536138288fd5342d561ccb1032291a93c319339deeaf6"
+  },
+  {
+    "path": "NativePort/combat-source/native/gameplay_gate.cpp",
+    "sha256": "12aa9ab2fe9850c18afdb5bad2a7635b4f83b0f837a5b8f9673449f3efba02fa"
+  },
+  {
+    "path": "NativePort/combat-source/native/gameplay_gate.h",
+    "sha256": "ebdc421a8778aee5b146656983e03cacd92854a5b6941b497085cc6f01068050"
+  },
+  {
+    "path": "NativePort/combat-source/native/input.cpp",
+    "sha256": "a72a259dc40b8b69adf9443c56c54258551056d7ce43d6f176c974f9da4261de"
+  },
+  {
+    "path": "NativePort/combat-source/native/input.h",
+    "sha256": "ee24653385e29264bdde4e83ecc9429ed443de632d1a8e6a3502bac9acd9bff8"
+  },
+  {
+    "path": "NativePort/combat-source/native/input_policy.h",
+    "sha256": "3f939092d19f86410d0598913574cf422ae7027a961112ea8e0534fec2f95500"
+  },
+  {
+    "path": "PlayerRenderer/Cargo.lock",
+    "sha256": "dc88a719f72f016192f6f0051e6acf0c7481a7d838a752634f565c5e0ce5807d"
+  },
+  {
+    "path": "PlayerRenderer/Cargo.toml",
+    "sha256": "6c9df6f60f857f937c45f7ccb4f56edb794a2ec1aec7e8bdca562299fa46b046"
+  },
+  {
+    "path": "PlayerRenderer/build.rs",
+    "sha256": "d1ccbf0c0f1adfc1dd5060300d45e3fa5fd79cca77533abe5bc408330d096430"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/camera_policy.h",
+    "sha256": "49e94be1f3eff70d70ea82a6a859b3cb9cb9caf33a5d95d557e1a0fe6fe1218d"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/check_driver_input.cpp",
+    "sha256": "9595ce6080ea5078e8587fe655cb34bf74cb7767a985c8f2b5bb81accfbec328"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/check_lifecycle.cpp",
+    "sha256": "a5c42042476582c42f6881b5cd71c475940e3542896f04addd776b421ef0acef"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/check_vehicle.cpp",
+    "sha256": "3e96797d55a9fba8879729f73b2ae89393cebb764ad749ca36ed44daf702092b"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/controller.inc",
+    "sha256": "0c5bb183644ae4c29845451726fd21239f96378532b2bc33ba705c2f95d24e36"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/driver_pose.h",
+    "sha256": "68cdb7b8e7d14ddfb39af083f1e89c195f13595b39bce8f6198602b5188aec9c"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/lifecycle_policy.h",
+    "sha256": "557fb83d959149e9d96822148c1e401b0fd0b2f2679ab2fe4201e62f5f172d67"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/ui-composite-test.cpp",
+    "sha256": "2c03906b5cf50d686ce9b14bfa22c4aaf10ea31daff80b93500c1d5d9e13109c"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/ui-composite.h",
+    "sha256": "fb653615e096076e974c47c243ba089b02177966e0b781cd42af12e849562d6d"
+  },
+  {
+    "path": "PlayerRenderer/car-drive/vehicle_physics.h",
+    "sha256": "a82716013dc373d12db35fb90e33ea24707c5277c1196bce5b23149506d0d8ef"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/car_asset.h",
+    "sha256": "bb7198ae9525ede0906a08470b3841f1fba6b8c042ac90036381e40c27e0d484"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/car_collision_probe.cpp",
+    "sha256": "c289baa5e43f177d8e00642c52b6c36a30c5a5e4b8756da63ab05dcedfa4675a"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/car_collision_probe.h",
+    "sha256": "3f42bf6eaca7b2944dd4eadfd882a60543873572552c553ce9833dbaf44e3214"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/car_demo.h",
+    "sha256": "2fc434e076d4ae06cb764711aa01f1e8b889cf9fba54a70f6d77060b59632150"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/car_demo_policy.h",
+    "sha256": "cf7b985fd95747e6da2b736028ca2c9bba75d2cbe9171fd874a0062a0edc0523"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/car_probe_signatures.h",
+    "sha256": "298ce79fcec8bccf5ff1f44158e857c5f9d473fe717987fbfe594f950840d131"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/car_render.h",
+    "sha256": "1f384b879b33b42a5c11c2db406318752babf7c4f54e23a2285825d40ef420cc"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/check_demo_policy.cpp",
+    "sha256": "891507da8b49460df03a31dec5c1376be274c3940d442e8f65b4c0e107f8faa7"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/vehicle_demo.cpp",
+    "sha256": "151b36ee9529c49ce7818f18004ba50935fb98b412bd09675398eb7530b3f3d9"
+  },
+  {
+    "path": "PlayerRenderer/car-proof/vehicle_demo.h",
+    "sha256": "ac9919e9a7b8d2fa3570d66b517c6fb6951cb13cd0273e68a9b706eabe5fd4f5"
+  },
+  {
+    "path": "PlayerRenderer/check_motion_blend.cpp",
+    "sha256": "8b13075f198fb5a5c56164474d94f492d3b9d073b47b37fbe1216668d9c5e526"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/camera/shake.h",
+    "sha256": "1ae9f76ca263d0d341fec950855859663e67be81b8d082fb732fafe9d9fdbee3"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/cheats/tests/check_regions.cpp",
+    "sha256": "403851d723ffb3a1f7e20c88863a16011c8c9ce0a6b5041dfd6f147329e674a3"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/lockon/check.cpp",
+    "sha256": "d604735cb46379ba9a62ecf4820a5d43f5202523fdade5c498a268e4eea9e7e7"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/lockon/check_target_wheel.cpp",
+    "sha256": "ac0197364f031b2b0c3f269b4dd578785050b571ec5041119cd902dff0867519"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/map/terrain_map.h",
+    "sha256": "312aee2c2a770a4c47145b611ec57d63b4d31b806624cfc8d901d94b0c253cb2"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/map/test_terrain_map.cpp",
+    "sha256": "84ad8c149ed77bfd16dbae39b5cf79cd758eab43dbd681fab55ec97cfae094a6"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/muzzle_visual.h",
+    "sha256": "ffe74018df88ed9e53f0bba2f62c0035041d203a7b06b4c74f78ca0d924ac17e"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/rpg/fx/original_gl_fx.h",
+    "sha256": "31a1f1c197e985c22493d1bc55b613b63937cd68382a56f3da6f96334072bc58"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/rpg/fx/original_grenade_typed.h",
+    "sha256": "5ac413e1b071b098641d308c15b5bf11d72d9240409ced14ccd9394ec7475bdc"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/rpg/fx/original_rpg_fx.h",
+    "sha256": "6f3ffb65f7c76904f5d9d4b0e18344ae114a6caff01b89c88082460c1b817cf4"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/rpg/fx/rpg_runtime.h",
+    "sha256": "137cf89da1fceb2739624b98aab581ae40b908a81eb7a4b1ba21f054dee6dc0d"
+  },
+  {
+    "path": "PlayerRenderer/polish-fix/test_muzzle_visual.cpp",
+    "sha256": "52e9ec95642bde84f40c67fbb0d98a41ebeeb1284ff581669dbffb6a3cd6f8d8"
+  },
+  {
+    "path": "PlayerRenderer/polish-next/camera/policy.h",
+    "sha256": "307a8bebf40aa0882894de140c32ce1b350e62fa8f92dbc69fac4b43da42a73b"
+  },
+  {
+    "path": "PlayerRenderer/polish-next/movement/donor_strafe.h",
+    "sha256": "fda07f692afd1dd8e8bc62b363f9762c0edaf5f74b22232ce04790ad98dc2c84"
+  },
+  {
+    "path": "PlayerRenderer/polish-next/player-status/health_policy.h",
+    "sha256": "cde1be2f2c264dc50b410ca250753f5aa41b7e809bccbc1acc317ed70da2d94d"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4/body_lighting.h",
+    "sha256": "e47513db6939bdfad2e216e196d4d90fdd7063fc33a473be7cd245cd8298fd67"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4/gpu_timing.h",
+    "sha256": "3cd2abb1d6f21b39e578f519070a697bd258fc53fe578a3c19bf561a40cb245c"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4/radar/hud_atlas.h",
+    "sha256": "4fc94cbe7073d3f30ba66e55d9bde0a88ceb96d6c569979eefe48eecacfe9076"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.2/ammo/check.cpp",
+    "sha256": "0fc4a5892c73803eb763d0bd5d7be96385fb281f97ee739b71fc0c476fce9fb3"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.3/camera-wheel/check.cpp",
+    "sha256": "60e381ae5de91eb46a20cda80f982cb9f667dd504ccf08c6940545aba1bd473a"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.3/camera-wheel/wheel_atlas.h",
+    "sha256": "293da4b8815fd396073c1ef37f1ab50d866e4225a311555ef941aa21648a945f"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.3/native-melee/check.cpp",
+    "sha256": "92c1b0774098c103489e3666bb9c540bc84ec608352dfa48e08805615d61dbcc"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.3/projectiles/check.cpp",
+    "sha256": "eec4b041fc72af540c7f2dcff905e714ff0eb1a8afdc3dfe306761537475a877"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.4/melee-assets/melee_animation.h",
+    "sha256": "dfa28010c8fa6202e028f6fb99faf2067f56514b020236643b87f11c5dfd9d13"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.5/aim-consumer/check.cpp",
+    "sha256": "f4e311c14614f64801f4ab89dfe8d18468386f71e6451159f3ac6cc6eb77b978"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.5/camera/check.cpp",
+    "sha256": "b566976b8b7490009b63e0d47bb680e492f0d903e52d3baf2914065eb3466c96"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.5/reticle/check.cpp",
+    "sha256": "32f76195a84ea6a1404e9f383097094c12059b943fbd485d70cdc6a8e1a6f8b5"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.5/sword/sword_carry.h",
+    "sha256": "cc89435a36bc5af2d1554cf6937e2cee8e57dee24aabfbe8298b80b96e8e6a5e"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.6/Params/expected_params.h",
+    "sha256": "d4669f53d9e5ebfebde6b60c9a854da99462bfc53917a5739b69ba314f6404fe"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.6/aim/checks/observations.cpp",
+    "sha256": "234fec0094f1e95d4d25ef02a6234486f21a000303dc19498128c498c0e9488d"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.6/camera/check_ground.cpp",
+    "sha256": "8937fc970efa2753647147b9291acdc8fbc9713bf08c34293ac4c923c289c4fc"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.6/check_scene.cpp",
+    "sha256": "897d510fb6032cb47ae251438057bb5adfe48391a282862e9a89cda537199976"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.6/sword/sword_attack.h",
+    "sha256": "eb3ef4e4bd9ab7926b40a759470e971982032957851133ba23ca6919f1a9ccb1"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.7/locomotion-audit/check.cpp",
+    "sha256": "6b0cb74a2e7ee304a66b79212f141548db5dcb6eca2e6f1c4432cf49ac17ba8b"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.8/target-marker/check.cpp",
+    "sha256": "95e2f25a6a10b98bf76588dec2d95fc5756ca2c42021204d065acec4e81c6344"
+  },
+  {
+    "path": "PlayerRenderer/polish-v4.9/check.cpp",
+    "sha256": "a977bd92917f4c519b403e13caf9eb52c30f64ab70792d5038ff6ed6da2be1dd"
+  },
+  {
+    "path": "PlayerRenderer/repair-next/fx/fx_runtime.h",
+    "sha256": "f507857388cf416d91c516df05a65408d3df6b1e6ace8a8ebba962ebf7501fa5"
+  },
+  {
+    "path": "PlayerRenderer/repair-next/fx/original_grenade_fx.h",
+    "sha256": "4e9df57d7a6e1dbb8f230a8840b6b890a13f34c15763fec875ca852d908a1dbd"
+  },
+  {
+    "path": "PlayerRenderer/repair-next/movement/check_signed_phase.cpp",
+    "sha256": "a224ec319554559efe6227cd38d1b0807c7f17086ffac92a4f3ac6d35ee2c1fa"
+  },
+  {
+    "path": "PlayerRenderer/src/ammo_policy.h",
+    "sha256": "8074a5c8629bed499a09f7f5f337ddf725465a230334fbb7e99dae708234b2c0"
+  },
+  {
+    "path": "PlayerRenderer/src/arsenal_animation.h",
+    "sha256": "7af68c99068c0d3b22df2582ec09d3710693d2f1666c58057a9a2ed317a30120"
+  },
+  {
+    "path": "PlayerRenderer/src/arsenal_audio.cpp",
+    "sha256": "a2fdce02c59c113f0495a86dfa7d0026aeb0933ce15cfba9b909a16065c4aef1"
+  },
+  {
+    "path": "PlayerRenderer/src/arsenal_ui.h",
+    "sha256": "3465cfaa5655c76230de268f02fd0ea87511543a927dd606e0f5535f3f29b5f5"
+  },
+  {
+    "path": "PlayerRenderer/src/arsenal_wheel_policy.h",
+    "sha256": "4d3abac0c37cd9029ea0f9054b99cffa092296c89b2ebdae17d2f6eb51f9d672"
+  },
+  {
+    "path": "PlayerRenderer/src/body_projection.h",
+    "sha256": "16c8e5a2364f33a19311f4f495e03433e348d17106ca5d7533454c758e6d0920"
+  },
+  {
+    "path": "PlayerRenderer/src/camera_overlay_policy.h",
+    "sha256": "733480ad8faaa8c2697d9f79a6d065fa9b9ea7e01b29b99e8095d18fef8af116"
+  },
+  {
+    "path": "PlayerRenderer/src/cheat_console.cpp",
+    "sha256": "8c96f8685f3392e7922325ee9d149b1b44064f1e83a1ee8c52004289c4ec35ef"
+  },
+  {
+    "path": "PlayerRenderer/src/cheat_console.h",
+    "sha256": "bc3f0b412b6d8b496ef0b039c51e2d93d3c70e585ec6ca92f9124ea3437a9ac2"
+  },
+  {
+    "path": "PlayerRenderer/src/cheat_policy.h",
+    "sha256": "fc59669f8d2412a9ca261eacc592ed0969f247cedc0665e1f3c4281733841408"
+  },
+  {
+    "path": "PlayerRenderer/src/cheat_ui.h",
+    "sha256": "45648cd2af0dd402a7fe2ca18f6ec51ac2ce5716b88ae00ea989c5e82598c2fc"
+  },
+  {
+    "path": "PlayerRenderer/src/directional_motion.h",
+    "sha256": "b5680fdecce1150cef38364f4159ca12d111ee2e04ccde1e5a331b6f6223d0a1"
+  },
+  {
+    "path": "PlayerRenderer/src/grenade_pose.h",
+    "sha256": "3ad720cbe1ab748bc8e0140523cfeb3838c40d9f9aaf4210a4f983df63dff0e9"
+  },
+  {
+    "path": "PlayerRenderer/src/ground_contact_policy.h",
+    "sha256": "669e74914bb7f21ada6512075bbf8d9e45b2d352716c8c50b840fe4b43e65c4b"
+  },
+  {
+    "path": "PlayerRenderer/src/gta_hud_renderer.h",
+    "sha256": "6a1175be8d948f088633b6911c8f3d36bff4c9c23a861458049a2e8ea82427cd"
+  },
+  {
+    "path": "PlayerRenderer/src/lib.rs",
+    "sha256": "fd0d99714e3892f2e2f2f845cd1ffc9a8126d3b4c1394d0aef2f20a0a7c25484"
+  },
+  {
+    "path": "PlayerRenderer/src/lock_camera_framing.h",
+    "sha256": "f4c36da809348731d7bd26d5e86f02ec53b48a8c79e506c173f41c830c721201"
+  },
+  {
+    "path": "PlayerRenderer/src/lock_marker_policy.h",
+    "sha256": "e2fee41385016864023672e43f059596f830b051ff61d1c75d22741da03afc4f"
+  },
+  {
+    "path": "PlayerRenderer/src/locomotion_mode_policy.h",
+    "sha256": "4ac7ca6b9ff292ba9b55c9406fdabe33761a31605bcb651bd0a2d7a47ff4dc75"
+  },
+  {
+    "path": "PlayerRenderer/src/mapped_animation.h",
+    "sha256": "072ee5e11285ccec46dd7f26a152c9f4401d6e79ba83ae9b0b0e7cdc9ec9281c"
+  },
+  {
+    "path": "PlayerRenderer/src/motion_blend.h",
+    "sha256": "1c27c011d217504ae44cc851225340e8bed2e6892822dfca4b37eb79752e0b16"
+  },
+  {
+    "path": "PlayerRenderer/src/native_animation_policy.h",
+    "sha256": "a4e1dd5eec48ba206c90c8d875c2ed800fc671b6ee88ed71be94f965de90d29f"
+  },
+  {
+    "path": "PlayerRenderer/src/native_lock_marker.cpp",
+    "sha256": "98acadf352fa163113339b8bdf51a74a82fde7c4268c9dc6b4fb933fac5dd2b6"
+  },
+  {
+    "path": "PlayerRenderer/src/native_lock_marker.h",
+    "sha256": "52d7bfeb9c22292158e5918f7581dbba89617cc4e4cc296e4fec3915d96d30e5"
+  },
+  {
+    "path": "PlayerRenderer/src/native_locomotion.cpp",
+    "sha256": "4fd5a3c8f11f5650fb9e139ae2ba81515fd70e6ad498ac514c1b399803aade24"
+  },
+  {
+    "path": "PlayerRenderer/src/native_locomotion.h",
+    "sha256": "83013d2e81978b0dd0b601a288af5b6e72c068338e9687a862bfc87223f773e4"
+  },
+  {
+    "path": "PlayerRenderer/src/native_locomotion_policy.h",
+    "sha256": "1e47a794b4e300943beac03eaa217a8ebeff0c8fb0e196d047e876fd870683e5"
+  },
+  {
+    "path": "PlayerRenderer/src/native_melee.cpp",
+    "sha256": "97e428de8874323b85f1cc07567247d25938848d29a52b5d5a4be217f33bb63f"
+  },
+  {
+    "path": "PlayerRenderer/src/native_melee.h",
+    "sha256": "f112c40587562840b074e811d0360a516d99360927bf2046a24633080b2d8213"
+  },
+  {
+    "path": "PlayerRenderer/src/native_melee_policy.h",
+    "sha256": "5e3bfb8c89da9c6b9e7393672d6baab18c2a66cbe4c272aa027037f4ea6e489f"
+  },
+  {
+    "path": "PlayerRenderer/src/native_shot_observation.h",
+    "sha256": "f3ae9231f9b6d650c0cab6f66d0ee7ea2a5866b8ad6536cc353258a70922f461"
+  },
+  {
+    "path": "PlayerRenderer/src/native_ui_capture.cpp",
+    "sha256": "8fcefb83793a0f4738ce2a7c0fc48d618e579d633e3f684a5f49f5c4519981d7"
+  },
+  {
+    "path": "PlayerRenderer/src/native_ui_capture.h",
+    "sha256": "c3725b74ca1241c28464a796441b06aa3555f2cbab029bd2e6a72eb7b87ba3cd"
+  },
+  {
+    "path": "PlayerRenderer/src/native_ui_state.cpp",
+    "sha256": "35f607f2a75c2a23fb3ff11c59d4c563351001ee80b891eca82d41df63698c1f"
+  },
+  {
+    "path": "PlayerRenderer/src/native_ui_state.h",
+    "sha256": "626a308090801994f42d6dd6266db19cb739b4f54cd6b7670e315f58e7f35da9"
+  },
+  {
+    "path": "PlayerRenderer/src/player_status.cpp",
+    "sha256": "9d4d667c075eac48163372ff691712fa8726797ea68a293ce10a26e309533e9f"
+  },
+  {
+    "path": "PlayerRenderer/src/player_status.h",
+    "sha256": "dd77248f93d126345baec7cf2ea106d57db8a47944a536609b9fef9576220b8b"
+  },
+  {
+    "path": "PlayerRenderer/src/portable_paths.h",
+    "sha256": "5b6b94670a425d1ed5598b848ca49f4418d297b598facd9c15718e3fdea070ce"
+  },
+  {
+    "path": "PlayerRenderer/src/projectile_policy.h",
+    "sha256": "ae2868b384e7c878436b2f26f00d36eec8049812e71101bda93021bb7b634c1c"
+  },
+  {
+    "path": "PlayerRenderer/src/radar_policy.h",
+    "sha256": "86fed0dc35cee22d6be75282a821598c0a4ddfe0a7c3defea44c7bc2e65e18bd"
+  },
+  {
+    "path": "PlayerRenderer/src/renderer.cpp",
+    "sha256": "94d1e0ae2734e7256d0c516e634d47f8a80dd3278dd00b1c089e48df58ae54c6"
+  },
+  {
+    "path": "PlayerRenderer/src/rifle.cpp",
+    "sha256": "6e50e46eda16d12c290f3412e45eb5c6c5a30f61c96b33f712fc9fe3e08ef157"
+  },
+  {
+    "path": "PlayerRenderer/src/rifle.h",
+    "sha256": "ac9a1718be75de1f3eb866385e6c00ee287d0618b892d679ad1580a2e60fa042"
+  },
+  {
+    "path": "PlayerRenderer/src/rifle_aim_policy.h",
+    "sha256": "e105853e3f1b8d0d9607cf5f5b6aaf0f3b93cc6ac2f4bac04e0737c0b6905594"
+  },
+  {
+    "path": "PlayerRenderer/src/scene_integration.h",
+    "sha256": "b73e709fa7eb46b5551729243955336a5408fc8ca677a4f353556ea2b0e333d3"
+  },
+  {
+    "path": "PlayerRenderer/src/scene_lifecycle.h",
+    "sha256": "cebecce4efa9aaff3a44690ae7241bc3fb69a1cda0ccfd2ebc3d614ba5b2795d"
+  },
+  {
+    "path": "PlayerRenderer/src/scope_reticle.h",
+    "sha256": "13f9d92656bbc2f49416cd0b98d7be43efec597def97d169c6d417da671154c8"
+  },
+  {
+    "path": "PlayerRenderer/src/shoulder_aim_policy.h",
+    "sha256": "b068bfc79336f0106bc49f1418c016297415977a4e3d6b9a1a642aa8edae545d"
+  },
+  {
+    "path": "PlayerRenderer/src/shoulder_camera.cpp",
+    "sha256": "612e67f7b66556a62203cba74419e7b98beb7321aa1948c256397e851653d2fd"
+  },
+  {
+    "path": "PlayerRenderer/src/shoulder_camera.h",
+    "sha256": "1c1ae227b1af0502144e2a70f7a378241ede8dbcf2867fa57dae3517cbd47f5b"
+  },
+  {
+    "path": "PlayerRenderer/src/status_region_cache.h",
+    "sha256": "cca71b63b6b1312cd3db379c0d15839ec2a6feaa52ad6dada7dc5a4a750347d3"
+  },
+  {
+    "path": "PlayerRenderer/src/ui_visibility_policy.h",
+    "sha256": "9a0112706d700a99780fa6786efd1ad9c2b7c28bb25ac0401b148d457a52ed6b"
+  },
+  {
+    "path": "PlayerRenderer/src/windows_swapchain.h",
+    "sha256": "35ede3cbdc1b9e2ba222d10b34cc21b84b322e478569a2f8915f3aedaf64253b"
+  },
+  {
+    "path": "README-RUNTIME.md",
+    "sha256": "5bad15ca991554a51dcd6150a8117aed970f9334a17de42faad02ef34ccf3bf5"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/LICENSE.txt",
+    "sha256": "d5c2224982b0b95a16b098a561335fa93f3eaf4d0aa964b7843edb986df78dc8"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/include/MinHook.h",
+    "sha256": "62dff05e63155c6bf8135c36a0d79dedbdcaaede9da26fe38daf0bea34323e38"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/buffer.c",
+    "sha256": "0ab484d7870c3a8e7a3a1ee61e2070072cf445ed85b619d4c4207fed34356d99"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/buffer.h",
+    "sha256": "9769702bd625249e59a19ede05c84365fcc7707e1fa0e5df08df42227cee13e3"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/hde/hde32.h",
+    "sha256": "5132de5be8ac7a9d054420f5caef0fb01437faa892f03b3cdc77f795973bf15a"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/hde/hde64.c",
+    "sha256": "824eafa315322e6da105a7ce4ec1fc0e0adeee0106d32152fbb0b59e709bd15c"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/hde/hde64.h",
+    "sha256": "e99aa4997bda14b534c614c3d8cb78a72c4aca91a1212c8b03ec605d1d75e36e"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/hde/pstdint.h",
+    "sha256": "604d1cdf45c5a95bc9cf1bbf39ca05ef83013541101d34971c5cd7577e3d5247"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/hde/table64.h",
+    "sha256": "b774446d2f110ce954fb0a710f4693c5562ddbd8d56fe84106f2ee80db8b50a2"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/hook.c",
+    "sha256": "7a78e9f8b4a0b3d790aa2be45d2a188e0184585224b6980bbe048b04d97b0c2b"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/trampoline.c",
+    "sha256": "6bc232a545d32ba565c53c0e8578055922314b2b4b219e3e6658a6f3451824a1"
+  },
+  {
+    "path": "Source/vendor/hudhook/vendor/minhook/src/trampoline.h",
+    "sha256": "53ed9934492320617a27bfd952ffe7f5b7a4a1d09963d4512447082fe7b727b4"
+  },
+  {
+    "path": "generated-headers.json",
+    "sha256": "12e4fc54717f15f4bca07b9d375f9b2be459c2c064a8d8e05684b29e62abb4a4"
+  },
+  {
+    "path": "policy-tests.json",
+    "sha256": "c78a735de7dc5f97e957e50c48580513ff70fe54ecc87371557dde70ae13cf99"
+  },
+  {
+    "path": "runtime-data-map.json",
+    "sha256": "fb9cda5e958761ba87152f199447bb99f31f12fbfeb840d82be9ee6a2bf1c7fb"
+  },
+  {
+    "path": "tests/run_policies.py",
+    "sha256": "da8aa94dfb13947f62fdb0a524cc447da02fd3454a8d965b3c1ac6503229de93"
+  }
+]

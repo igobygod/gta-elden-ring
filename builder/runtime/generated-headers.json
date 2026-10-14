@@ -1,0 +1,11 @@
+[
+  "PlayerRenderer/repair-next/fx/original_grenade_fx.h",
+  "PlayerRenderer/polish-fix/rpg/fx/original_rpg_fx.h",
+  "PlayerRenderer/polish-fix/rpg/fx/original_gl_fx.h",
+  "PlayerRenderer/polish-fix/rpg/fx/original_grenade_typed.h",
+  "PlayerRenderer/polish-v4.5/sword/sword_carry.h",
+  "PlayerRenderer/polish-v4/radar/hud_atlas.h",
+  "PlayerRenderer/polish-v4.3/camera-wheel/wheel_atlas.h",
+  "PlayerRenderer/polish-v4.6/sword/sword_attack.h",
+  "PlayerRenderer/polish-v4.6/Params/expected_params.h"
+]

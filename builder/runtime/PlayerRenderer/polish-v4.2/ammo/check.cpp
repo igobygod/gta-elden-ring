@@ -1,0 +1,3 @@
+#include "../../src/ammo_policy.h"
+#include <cassert>
+int main(){using namespace ammo_policy;unsigned r=3;assert(transfer(8,12,r)==11&&r==0);assert(transfer(11,12,r)==11);r=60;assert(transfer(12,12,r)==12&&r==60);unsigned total=0;for(int i=0;i<100;i++)total+=transfer(0,12,r);assert(total==60&&r==0);assert(changed(4,2,0,0));assert(changed(6,6,0,1));assert(!changed(6,6,1,1));assert(!changed(4,4,0,1));assert(!recovered(1000,1200,2400));assert(!recovered(1535,1200,2400));assert(!recovered(3599,1200,2400));assert(recovered(3600,1200,2400));assert(recovered(1,0,2400));r=5;assert(transfer(0,1,r)==1&&r==4);}

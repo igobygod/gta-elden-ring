@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0-windows-preview",
+  "windows_installation_enabled": true,
+  "native_windows_end_to_end_verified": false,
+  "native_windows_gameplay_verified": false,
+  "previous_macOS_builder_validation": "Full local build and launch smoke test passed in 0.1.0; see prior report.",
+  "distribution": "source plus setup UI only; no game assets"
+}

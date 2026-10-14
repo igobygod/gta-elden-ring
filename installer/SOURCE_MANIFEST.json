@@ -1,0 +1,80 @@
+{
+  "author": "igobygod",
+  "files": [
+    {
+      "path": "BUILD.txt",
+      "bytes": 732,
+      "sha256": "0c4e900aae894af76e407c43f9b66c0bdd306d3d1a9ff8539ebc0a0a7021c5a8"
+    },
+    {
+      "path": "Core.cs",
+      "bytes": 5838,
+      "sha256": "061bed0e58016a5ca66c97176fc8476fd90409931ea76ef18ec0e5fcdd0cd543"
+    },
+    {
+      "path": "Engine.cs",
+      "bytes": 10748,
+      "sha256": "ea21d7669137f4e69e834e92fea19a3fd84d04c298c690ed5220bdbfafeb30d4"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1212,
+      "sha256": "1bc60d259c265092a134d3392958aa5a806acc838af2e1647297e0dc6f583881"
+    },
+    {
+      "path": "Program.cs",
+      "bytes": 8028,
+      "sha256": "c9d1662f6d81d2c28ff608c9e4be55574437a0e02c247eb917bd1865090a60a5"
+    },
+    {
+      "path": "Setup.csproj",
+      "bytes": 1475,
+      "sha256": "91b3843e9b03390ef5f87fa5174243b44ea85e3bb43ba0be8aaa762c37b4a0bb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1994,
+      "sha256": "d33f22010c54332e905594a0279662d1f05c0c4c943dba2ca012e7dfa5193940"
+    },
+    {
+      "path": "app.manifest",
+      "bytes": 826,
+      "sha256": "9e5aa1f5116fe1baa8db745f7478e44548ef0b35b51a64554357ff8997317fe1"
+    },
+    {
+      "path": "payload.zip",
+      "bytes": 418452,
+      "sha256": "f2f6829f9fc76c177bbdb0360bd20f35797da21498c9069bfd99ccd0d8d51b7c"
+    },
+    {
+      "path": "release.json",
+      "bytes": 6467,
+      "sha256": "311f577bd5c3b4245dcb7476aa93552e190eb5c8da85ac4bc5b1f417f806d5ee"
+    },
+    {
+      "path": "tests/Program.cs",
+      "bytes": 4870,
+      "sha256": "3127865f0ff1b18c4c77d1f18388f5adaa0f33f2253f7bea4e2bc566698823f1"
+    },
+    {
+      "path": "tests/Tests.csproj",
+      "bytes": 289,
+      "sha256": "3ee32dc97d3d2f07cfbf10b825229ee22521bd30875df4ed187b83b45e3c93fd"
+    },
+    {
+      "path": "tests/test_worker.py",
+      "bytes": 651,
+      "sha256": "3a3e1e205814a9f4c9c2590a5efb8c5677c8c28d2e0f81624c0c5a25b1d19043"
+    },
+    {
+      "path": "tools.json",
+      "bytes": 2142,
+      "sha256": "827b271ab48c53d6aacec78c5ae4f86e3e0e990e92377916df985a231e70d949"
+    },
+    {
+      "path": "windows_worker.py",
+      "bytes": 678,
+      "sha256": "cbd9e2a1bc9450ccb9249b6545260f2c175492bfd888e10792b3fc36a592ec40"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+igobygod — GTA × Elden Ring Windows Setup
+Version 0.2.0 preview
+
+HOW TO USE IT
+1. Have GTA V Legacy and Elden Ring installed on your Windows PC.
+2. Open igobygod Setup.exe.
+3. Check the game folders it found, or choose them with Browse.
+4. Choose a new or empty folder for the mod. Leave at least 35 GB free.
+5. Select the automatic-preparation checkbox, then click Install mod.
+6. Allow the Microsoft setup prompts if they appear. If Microsoft requires
+   a restart, restart Windows and run this setup again with the same folder.
+7. When setup finishes, click Play mod or use Play igobygod Mod on the desktop.
+
+You do not need to type any commands or manually install developer tools.
+The first installation needs internet access and downloads several GB of
+supporting tools. Progress is shown in the setup window. Keep the whole
+installation folder after setup; the launcher needs its local tools.
+
+If setup stops, use Open setup folder to find setup.log. Reopen the same
+installer and select the same destination to retry. Completed downloads are
+kept. Stop after this step waits for the current operation to finish safely.
+
+WHAT IT DOES
+The installer reads your own game files and rebuilds Franklin, the weapons,
+animations, HUD, sounds and other mod assets locally. It leaves the original
+game files in place and launches the mod offline with a separate save.
+Keep Steam running and logged in before playing.
+
+CONTROLS
+Hold Tab: weapon wheel. Right mouse: aim. Left mouse: fire. R: reload.
+Backtick/tilde: cheat console. Enter: submit. Esc: close.
+Roll, jump and lock-on use your existing Elden Ring keybindings.
+
+REQUIREMENTS AND CURRENT LIMITS
+- 64-bit Windows 10 or 11 with .NET Framework 4.8.
+- GTA V Legacy; GTA V Enhanced is unsupported.
+- The exact supported Elden Ring 1.17.1.0 executable is checked automatically.
+  Availability of that exact executable across retail installs is unverified.
+- Windows installation is enabled in this preview.
+- The installer builds successfully and its core checks pass. A complete
+  native Windows installation and gameplay test have not yet been performed.
+- This executable is unsigned. It has no code-signing certificate.
+
+SHARING AND REMOVAL
+Share the original setup executable, guide and optional source archive.
+Do not share a completed local installation: it contains game-derived assets.
+To remove the mod, close the game and delete its installation folder and
+shortcut. Microsoft components can be managed in Windows Installed Apps.
+The separate mod save can be backed up and kept. Normal game saves are
+not removed by setup.
+
+Created for igobygod with AI-assisted development using OpenAI Codex.

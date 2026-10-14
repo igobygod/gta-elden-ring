@@ -1,0 +1,200 @@
+{
+  "name": "igobygod GTA x Elden Ring",
+  "version": "0.2.0-windows-preview",
+  "release_ready": false,
+  "elden_ring_sha256": "1a3547101327f65d0c76da2f9190ac0aa66871ea42bae2aecc61e11a8b597891",
+  "elden_ring_file_version": "1.17.1.0",
+  "platforms": {
+    "Darwin": {
+      "build_ready": true,
+      "build_verified": true,
+      "launcher_verified": true,
+      "gameplay_verified": false
+    },
+    "Windows": {
+      "build_ready": true,
+      "build_verified": false,
+      "launcher_verified": false,
+      "gameplay_verified": false,
+      "blockers": [
+        "Windows native installation and gameplay testing remain pending."
+      ],
+      "installation_enabled": true
+    }
+  },
+  "blockers": [
+    "Interactive macOS gameplay validation remains pending.",
+    "Native Windows clean installation and gameplay remain unverified.",
+    "Availability of the supported executable hash across retail/Steam installations has not been established."
+  ],
+  "payload": [
+    {
+      "path": "runtime/data/buffalo2-atlas.rgba",
+      "bytes": 16777216,
+      "sha256": "d21204c3868ebf4dc5b75f335628eb51663db24bdd6c010e51ffa95e2a5e939a"
+    },
+    {
+      "path": "runtime/data/atlas.rgba",
+      "bytes": 67108864,
+      "sha256": "3e416dd4dbc34c8fdececedeb46dd004c7fb0569f29efcfcb8cce15d3bfd18cb"
+    },
+    {
+      "path": "runtime/data/fx-atlas.rgba",
+      "bytes": 67108864,
+      "sha256": "106f66e996dd365af8ffc23243d4d0ec873d88089fa75b46d9086b680fa8b155"
+    },
+    {
+      "path": "runtime/data/wasted-original.rgba",
+      "bytes": 507840,
+      "sha256": "e1b61c143008acbed709cabb820b2201c0588c547860e6a5668677ea93124dea"
+    },
+    {
+      "path": "runtime/data/hud-atlas.rgba",
+      "bytes": 4194304,
+      "sha256": "42f97b6b74b2649f59c12dba675a2f9feb85d838572efaa443a206aaf1e3faa6"
+    },
+    {
+      "path": "runtime/data/terrain-map.rgba",
+      "bytes": 67108864,
+      "sha256": "db7bd9d5c358a617a37ab607c51895875fb0e18f29310d2e7aceb9fac48f3a98"
+    },
+    {
+      "path": "runtime/data/sword.rgba",
+      "bytes": 4194304,
+      "sha256": "212576f2fceef9ec2d5e263a57c1725040c0712cdd5343f350756ca176786534"
+    },
+    {
+      "path": "runtime/data/model.bin",
+      "bytes": 111110448,
+      "sha256": "e75590b80c01bc7d89fc2ec77b7afa8e7744c4398cace547e1e913f0cd7e2eb5"
+    },
+    {
+      "path": "runtime/data/arsenal-joints.bin",
+      "bytes": 26066304,
+      "sha256": "43a2fc2e19fd0548f1de0fe7e9185981902988e4af4e2f4f6d749291e7a267ec"
+    },
+    {
+      "path": "runtime/data/arsenal-mesh.bin",
+      "bytes": 1659188,
+      "sha256": "de511bcd3754b018a99b967b8a140eac7966cab7d6d3ec8162bfa972079de877"
+    },
+    {
+      "path": "runtime/data/projectile-mesh.bin",
+      "bytes": 6616,
+      "sha256": "c8b259042a214e52eba212ba7420c62f8d757806439f402996fb1c7358924d6d"
+    },
+    {
+      "path": "runtime/data/rpg-joints.bin",
+      "bytes": 4834092,
+      "sha256": "b3dd44509886f08f200a0c11d36e61c156c1233a038cc3d515df297d077cf59f"
+    },
+    {
+      "path": "runtime/data/rpg-mesh.bin",
+      "bytes": 211828,
+      "sha256": "046cfff4c9d4657492014f738aeae2652ce2e2b639af335df70e8e362d375642"
+    },
+    {
+      "path": "runtime/data/rpg-projectile-mesh.bin",
+      "bytes": 26296,
+      "sha256": "bc16d1d172d97dd627930e6f4d3de09805963a4bfd2f44683f9ad92bd2201beb"
+    },
+    {
+      "path": "runtime/data/armed-directional.bin",
+      "bytes": 10305628,
+      "sha256": "477a0d80916a086a27782638c81f4a0044f48d7b45fc5e083d88e07c0e279acd"
+    },
+    {
+      "path": "runtime/data/melee-joints.bin",
+      "bytes": 34294880,
+      "sha256": "3e30321b73fc30c7cb32946d76e440d581538cad5e4ef58792197f1a7e2488e5"
+    },
+    {
+      "path": "runtime/data/sword-fallback-attachment.bin",
+      "bytes": 64,
+      "sha256": "cbfd7b94c1955b325957f3c73fe37d4a5d03c75b666c3a71d0afaff0bc6836c6"
+    },
+    {
+      "path": "runtime/data/sword-mesh.bin",
+      "bytes": 346104,
+      "sha256": "b4c0305d4dded8a0b2d3d9c95f5b9391da2e7d9a8d8d27635900ae37ede7f918"
+    },
+    {
+      "path": "runtime/data/driver.bin",
+      "bytes": 2210172,
+      "sha256": "a022bedfa38653fa25ad755134f0a0a6af552d82c226b5016cf27cf7c090ad88"
+    },
+    {
+      "path": "runtime/data/buffalo2.carbin",
+      "bytes": 862744,
+      "sha256": "2e4a9e0964e3450b66b7bac44edf20efe57f64ce3a5c050d72089a295c1d8a74"
+    },
+    {
+      "path": "runtime/data/roll.bin",
+      "bytes": 674611956,
+      "sha256": "52a2eb22b827e3b4ba55776f3a3bb978358dcf3bfbec6b829f8bddbd00a713b1"
+    },
+    {
+      "path": "runtime/data/death.bin",
+      "bytes": 195379440,
+      "sha256": "ece4a464f071f7a3af405a2eafe0aa0f282f4a0baede7bfe1580a5b1f5f97962"
+    },
+    {
+      "path": "runtime/data/audio/wasted.pcm",
+      "bytes": 655674,
+      "sha256": "76daceed558b92870fec4d646a1a822c110c8979615ee640840602160936494d"
+    },
+    {
+      "path": "runtime/data/audio/rifle.pcm",
+      "bytes": 131346,
+      "sha256": "012d32d7d341d0bcd4dde2e36f74c314df69d78b2ad55760e3c28d078e59a7b3"
+    },
+    {
+      "path": "runtime/data/audio/pistol.pcm",
+      "bytes": 144912,
+      "sha256": "ce0bbde2408080c2e112c7b0ef235d926ba30f0b710bc525f9f804e1b4e303ec"
+    },
+    {
+      "path": "runtime/data/audio/launcher.pcm",
+      "bytes": 106762,
+      "sha256": "5cdcb7c952fcaa6dabbc6e46919939a1ae5b51bd93c920a9ced5d80376ca2aac"
+    },
+    {
+      "path": "runtime/data/audio/explosion.pcm",
+      "bytes": 131346,
+      "sha256": "2835f40cd34ee688ca6d5c74bc1703566cf7a68ec297123c758acb2af6402240"
+    },
+    {
+      "path": "runtime/data/audio/smg.pcm",
+      "bytes": 132300,
+      "sha256": "f4e569c367a700ebabd1459c07b9d937f5f7096ced37ee5812fdda684ca3442d"
+    },
+    {
+      "path": "runtime/data/audio/shotgun.pcm",
+      "bytes": 119070,
+      "sha256": "4023d2337e11d4be9272f3f534997b6799770ceb077e0c3e42ddb4aed8542157"
+    },
+    {
+      "path": "runtime/data/audio/sniper.pcm",
+      "bytes": 105840,
+      "sha256": "618181ef3e18b0e96234b2f6c01b9a732f6541f6289fc53689ebd1d104a29aa5"
+    },
+    {
+      "path": "assets/regulation.bin",
+      "bytes": 1894208
+    },
+    {
+      "path": "assets/menu/01_000_fe.gfx",
+      "bytes": 1634770,
+      "sha256": "220e4234cdf48174318c0842dde02e0de0b8f426775decac947070a4eb9b5014"
+    },
+    {
+      "path": "assets/msg/engus/menu.msgbnd.dcx",
+      "bytes": 641509,
+      "sha256": "6810407a736aeee9bb711eded7e8c7f5dac056e120348417f098f62f801c9eca"
+    },
+    {
+      "path": "runtime/franklin_player_renderer.dll",
+      "min_bytes": 200000
+    }
+  ]
+}

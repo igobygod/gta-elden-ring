@@ -1,0 +1,15 @@
+{
+  "preview": "0.2.0-windows-preview",
+  "repository_preparation_date": "2026-10-14",
+  "builder_source_files": 226,
+  "builder_source_bytes": 1000226,
+  "source_manifests": "verified",
+  "readable_source_matches_embedded_payload": true,
+  "preview_binary_matches_original": true,
+  "builder_unit_tests_passed": 24,
+  "worker_tests_passed": 1,
+  "private_path_and_secret_scan": "passed",
+  "game_asset_type_audit": "passed; only original setup EXE and source-only payload ZIP permitted",
+  "native_windows_installation_verified": false,
+  "native_windows_gameplay_verified": false
+}

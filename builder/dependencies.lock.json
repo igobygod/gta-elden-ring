@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "directory": "CodeWalker-src",
+      "url": "https://github.com/dexyfex/CodeWalker.git",
+      "commit": "485d56bec00262ed7fa472261cce7bbc6202b96e"
+    },
+    {
+      "directory": "SoulsFormats",
+      "url": "https://github.com/JKAnderson/SoulsFormats.git",
+      "commit": "9c0da6b0721372b34f36b4be503ec020dca1043a"
+    },
+    {
+      "directory": "UXM",
+      "url": "https://github.com/Nordgaren/UXM-Selective-Unpack.git",
+      "commit": "9501be87e272b6dae55e60a13c3f4753ca6fb3bb"
+    },
+    {
+      "directory": "Paramdex",
+      "url": "https://github.com/soulsmods/Paramdex.git",
+      "commit": "ff7245e524329bc3eab00036723d2bd53384cedf"
+    }
+  ],
+  "archives": [
+    {
+      "directory": "ffdec",
+      "filename": "ffdec_26.3.0.zip",
+      "url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version26.3.0/ffdec_26.3.0.zip",
+      "sha256": "35f4930eb7c380afe66f2117f90b006deac0631473ad7500bb39c78f68645ecd"
+    },
+    {
+      "directory": "me3",
+      "filename": "me3-windows-amd64.zip",
+      "url": "https://github.com/garyttierney/me3/releases/download/v0.13.0/me3-windows-amd64.zip",
+      "sha256": "a8b693c574106f20532ab1e8b58b2452f37370679b938a884fe75f87f9b68c2b"
+    }
+  ]
+}

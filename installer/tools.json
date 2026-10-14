@@ -1,0 +1,51 @@
+[
+  {
+    "id": "python",
+    "url": "https://api.nuget.org/v3-flatcontainer/python/3.13.12/python.3.13.12.nupkg",
+    "hash": "389c0228afbb3530f6cd079f5cec44139b1441dd51c85ec704f7a63f1c9f3802",
+    "algorithm": "sha256",
+    "file": "python.zip"
+  },
+  {
+    "id": "java",
+    "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jre_x64_windows_hotspot_21.0.12.1_1.zip",
+    "hash": "d35f31e712f0fcf6ac5a093edc90204fbff22f720ba3950bd09d331d5e621636",
+    "algorithm": "sha256",
+    "file": "java.zip"
+  },
+  {
+    "id": "dotnet",
+    "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.425/dotnet-sdk-8.0.425-win-x64.zip",
+    "hash": "f0b6f15bf6f1a0507205c0cb102ab99e1dee875c4682c8ed94665be1d580186a06b21455e83b3a01a0ff7f4cd887b67420f2e2fe09ed985534a4cea488ae1af9",
+    "algorithm": "sha512",
+    "file": "dotnet.zip"
+  },
+  {
+    "id": "git",
+    "url": "https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/MinGit-2.49.0-64-bit.zip",
+    "hash": "971cdee7c0feaa1e41369c46da88d1000a24e79a6f50191c820100338fb7eca5",
+    "algorithm": "sha256",
+    "file": "git.zip"
+  },
+  {
+    "id": "rust",
+    "url": "https://static.rust-lang.org/rustup/archive/1.28.2/x86_64-pc-windows-msvc/rustup-init.exe",
+    "hash": "88d8258dcf6ae4f7a80c7d1088e1f36fa7025a1cfd1343731b4ee6f385121fc0",
+    "algorithm": "sha256",
+    "file": "rustup-init.exe"
+  },
+  {
+    "id": "buildtools",
+    "url": "https://download.visualstudio.microsoft.com/download/pr/c95450be-0a45-4779-b142-33f567ccfd6e/2a6aa7d94e38d457a4eb3930fc60056ecab06865b2eb925e5275b8473a017583/vs_BuildTools.exe",
+    "hash": "2a6aa7d94e38d457a4eb3930fc60056ecab06865b2eb925e5275b8473a017583",
+    "algorithm": "sha256",
+    "file": "vs_buildtools.exe"
+  },
+  {
+    "id": "vcredist",
+    "url": "https://download.visualstudio.microsoft.com/download/pr/990c720a-46ce-4dc7-87b9-c2eb615d34b9/CC0FF0EB1DC3F5188AE6300FAEF32BF5BEEBA4BDD6E8E445A9184072096B713B/VC_redist.x64.exe",
+    "hash": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b",
+    "algorithm": "sha256",
+    "file": "vc_redist.x64.exe"
+  }
+]

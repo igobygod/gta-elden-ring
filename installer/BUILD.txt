@@ -1,0 +1,9 @@
+Maintainers: build Setup.csproj with the .NET 8 SDK using dotnet build Setup.csproj -c Release. The end-user only needs the setup EXE.
+
+The app targets Windows x64 and .NET Framework 4.8. Its embedded payload.zip contains the source builder and its full source manifest. Dependency downloads are pinned in tools.json and inside the builder. Game assets and development credentials must never be added.
+
+Core checks: dotnet run --project tests/Tests.csproj
+Worker check: python tests/test_worker.py
+
+Microsoft compiler guidance: https://learn.microsoft.com/en-us/cpp/build/clang-support-msbuild
+Microsoft installer guidance: https://learn.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio

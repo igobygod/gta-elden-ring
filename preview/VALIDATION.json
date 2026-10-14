@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0-windows-preview",
+  "author": "igobygod",
+  "windows_installation_enabled": true,
+  "executable_architecture": "Windows x64 .NET Framework 4.8 GUI",
+  "build": "passed, zero warnings and errors",
+  "core_checks": "passed: paths, quoting, empty folders, retries, archive containment, extraction, process arguments and error propagation",
+  "worker_check": "passed",
+  "existing_builder_unit_tests": 24,
+  "embedded_resources": "verified byte-for-byte against release inputs",
+  "privacy_scan": "passed",
+  "game_assets_bundled": false,
+  "code_signed": false,
+  "native_windows_installation_verified": false,
+  "native_windows_gameplay_verified": false
+}
