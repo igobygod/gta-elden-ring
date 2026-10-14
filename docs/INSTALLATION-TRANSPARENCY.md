@@ -1,6 +1,6 @@
 # What setup downloads, runs and changes
 
-Applies to **0.2.0-windows-preview**. This describes the current implementation, not a claim that end-to-end Windows installation has passed. The source of truth is `installer/Engine.cs`, `installer/tools.json`, `builder/bootstrap.py`, `builder/setup.py` and the dependency lock files.
+Applies to **0.2.1-windows-preview**. This describes the current implementation, not a claim that end-to-end Windows installation has passed. The source of truth is `installer/Engine.cs`, `installer/tools.json`, `builder/bootstrap.py`, `builder/setup.py` and the dependency lock files.
 
 ## Before installation
 
@@ -43,6 +43,7 @@ Network requests go to the listed upstream repositories/distributors and package
 - NuGet/.NET and vendor tools may create normal per-user/system caches outside the chosen folder. Not every temporary/cache file is confined to it.
 - Setup creates a **Play igobygod Mod** desktop shortcut. It does not register a Windows service, scheduled task, automatic updater or startup launcher.
 - No project Windows uninstaller entry is created; removal is described below.
+- Archive extraction uses extended Windows paths so the .NET SDK can unpack even with the system long-path policy disabled. Setup does not change the Windows `LongPathsEnabled` registry setting.
 
 ## Files created in the chosen folder
 

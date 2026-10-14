@@ -29,6 +29,8 @@
 | Native Windows gameplay | **Not performed** |
 | Digital signing | **Not signed** |
 
+Version 0.2.1 fixes the ZIP extraction path failure reproduced in Windows 11 LTSC ARM64 with .NET Framework 4.8.1 and `LongPathsEnabled=0`. The x64 regression executable runs under emulation. The previous code failed with `DirectoryNotFoundException`; the updated code passes a 310-character path test and preserves traversal rejection. This targeted test does not establish support for running Elden Ring in that VM or Windows on ARM generally.
+
 The macOS results are prior recorded results, not tests rerun during repository publication. They cannot certify Windows behavior. Machine-readable setup status is in [preview/VALIDATION.json](../preview/VALIDATION.json). The embedded builder retains its original validation records.
 
 ## Windows acceptance checklist — all pending

@@ -18,8 +18,8 @@
     },
     {
       "path": "VALIDATION.json",
-      "bytes": 352,
-      "sha256": "2333a1c478ee4633eb427375c88f062756f3fc11652eb6e3100a7c155ad3b54e"
+      "bytes": 708,
+      "sha256": "8d86ab7489797948475f16f970ce8f541551c80f28097a19ba4c212975dad160"
     },
     {
       "path": "bootstrap.py",
@@ -374,7 +374,7 @@
     {
       "path": "release.json",
       "bytes": 6467,
-      "sha256": "311f577bd5c3b4245dcb7476aa93552e190eb5c8da85ac4bc5b1f417f806d5ee"
+      "sha256": "b5d7bea96d37d62d7f9cb91ae340b2260c953dd397ac0161027a929cb39cd364"
     },
     {
       "path": "requirements-build.txt",

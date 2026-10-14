@@ -1,10 +1,10 @@
 # igobygod — GTA × Elden Ring
 
-**Experimental GitHub preview · 0.2.0-windows-preview · one exact Elden Ring executable · Windows testing pending**
+**Experimental GitHub preview · 0.2.1-windows-preview · one exact Elden Ring executable · Windows gameplay testing pending**
 
 This project brings Franklin, GTA-style weapons, a weapon wheel, cheat console, HUD, sounds, sword support and a Buffalo vehicle prototype into Elden Ring. The Windows installer rebuilds the required assets from the player's own installed games. No game assets are included in this repository or in the setup executable.
 
-**This is a private development preview, not a broadly tested release.** The setup executable compiles and its core automated checks pass. A complete native Windows installation and gameplay test have **not** been completed. Some included features are prototypes; inclusion in the source does not mean verified Windows gameplay.
+**This is a private development preview, not a broadly tested release.** The setup executable compiles and its core automated checks pass. The Windows long-path extraction regression has been tested in a Windows 11 ARM64 VM running the x64 .NET Framework test executable. A complete native Windows installation and gameplay test have **not** been completed. Some included features are prototypes; inclusion in the source does not mean verified Windows gameplay.
 
 ## Start here
 
@@ -68,6 +68,8 @@ Cheats include `MAXHEALTH`, `INVINCIBLE`, `MAXAMMO`, `NORELOAD`, `BUFFALO` and `
 | [scripts/](scripts/) | Repository packaging and source/payload consistency checks |
 
 The checked-in `installer/payload.zip` is authored source, not a completed mod installation. Its extracted files match `builder/`. The preview EXE embeds that source and the setup UI; it does not embed game assets or the asset-bearing mod DLL. A developer rebuilding from changed source must refresh the payload first: see [maintainer instructions](docs/DEVELOPMENT.md).
+
+Version 0.2.1 fixes the .NET SDK unpacking failure caused by long Windows paths. If 0.2.0 failed at that step, close the old installer, open 0.2.1 and choose the same installation folder. Verified cached downloads are reused. No Windows registry change or game-folder move is required for this extraction fix.
 
 ## Privacy, licenses and credits
 

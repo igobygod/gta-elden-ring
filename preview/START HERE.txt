@@ -1,5 +1,5 @@
 igobygod — GTA × Elden Ring Windows Setup
-Version 0.2.0 preview
+Version 0.2.1 preview
 
 HOW TO USE IT
 1. Have GTA V Legacy and Elden Ring installed on your Windows PC.
@@ -50,3 +50,14 @@ The separate mod save can be backed up and kept. Normal game saves are
 not removed by setup.
 
 Created for igobygod with AI-assisted development using OpenAI Codex.
+
+FIX IN 0.2.1
+Fixes long Windows paths while unpacking the .NET SDK. Tested in a Windows
+11 LTSC ARM64 VM using the x64 .NET Framework test executable, with the
+system long-path setting disabled. Both a small regression archive and
+the complete cached .NET SDK archive passed. This does not verify full mod
+installation or gameplay in the VM.
+
+Close the old setup window, open this new EXE, select the same games and
+installation folder, and click Install mod. Verified cached downloads are
+reused. You do not need to move your games or change Windows settings.

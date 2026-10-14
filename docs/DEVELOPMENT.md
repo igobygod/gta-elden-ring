@@ -4,7 +4,7 @@ Players use the setup EXE. The commands here are only for developers working on 
 
 ## Source layout and snapshot
 
-`builder/` is a readable, byte-for-byte extraction of `installer/payload.zip`. `installer/` preserves the original GUI release source and source manifest. The committed preview binary is unchanged from the locally compiled 0.2.0 Windows preview. The two copies are intentional: one is browsable on GitHub, and one is the exact embedded setup payload.
+`builder/` is a readable, byte-for-byte extraction of `installer/payload.zip`. `installer/` contains the GUI release source and source manifest. The committed preview binary is rebuilt for 0.2.1 with the Windows long-path extraction fix. The two copies are intentional: one is browsable on GitHub, and one is the exact embedded setup payload.
 
 From the repository root, Python 3 checks the source manifests and payload consistency:
 
@@ -41,6 +41,15 @@ python installer/tests/test_worker.py
 python -m unittest discover -s tests
 python builder/runtime/tests/run_policies.py
 ```
+
+For the Windows .NET Framework path regression, build and run the dedicated test executable in Windows without changing the system long-path policy:
+
+```sh
+dotnet build installer/tests/windows/WindowsPaths.csproj -c Release
+installer/tests/windows/bin/Release/net48/WindowsPaths.exe
+```
+
+An optional `--sdk <downloaded-dotnet.zip>` argument exercises the full SDK archive at a deliberately long temporary destination and removes that fixture afterwards. Do not point test outputs at a game installation or existing mod installation.
 
 The core process tests require `dotnet` on PATH or `DOTNET_HOST_PATH` pointing to it. Runtime policy tests require a C++ compiler. Run only the checks relevant to the change, then complete native Windows acceptance testing before claiming Windows readiness. The existing builder README contains advanced conversion prerequisites and platform-specific commands; the Windows GUI automates those for players.
 

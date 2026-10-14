@@ -8,8 +8,8 @@
     },
     {
       "path": "Core.cs",
-      "bytes": 5838,
-      "sha256": "061bed0e58016a5ca66c97176fc8476fd90409931ea76ef18ec0e5fcdd0cd543"
+      "bytes": 6908,
+      "sha256": "049441eeaedeed214e1042f3a0d5d183d7fde969369bd49592d66c36606b9093"
     },
     {
       "path": "Engine.cs",
@@ -23,13 +23,13 @@
     },
     {
       "path": "Program.cs",
-      "bytes": 8028,
-      "sha256": "c9d1662f6d81d2c28ff608c9e4be55574437a0e02c247eb917bd1865090a60a5"
+      "bytes": 8056,
+      "sha256": "ad50e2de9091128117604c42251f49b4a2b2aab1aad75dce1219295ec98b573e"
     },
     {
       "path": "Setup.csproj",
       "bytes": 1475,
-      "sha256": "91b3843e9b03390ef5f87fa5174243b44ea85e3bb43ba0be8aaa762c37b4a0bb"
+      "sha256": "e9f113b7478f47a335cab3043ca236e655b30b70c4cf5e4e34b0ea15e0f6aea1"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -39,17 +39,17 @@
     {
       "path": "app.manifest",
       "bytes": 826,
-      "sha256": "9e5aa1f5116fe1baa8db745f7478e44548ef0b35b51a64554357ff8997317fe1"
+      "sha256": "f7a19cfac3b2897b440614360773452dfc4216a1ad70d2a85eda82b3a0cdef03"
     },
     {
       "path": "payload.zip",
-      "bytes": 418452,
-      "sha256": "f2f6829f9fc76c177bbdb0360bd20f35797da21498c9069bfd99ccd0d8d51b7c"
+      "bytes": 419184,
+      "sha256": "cba27d375df4a28a52c006640de56db1213eab77e66f1c3933b8899a60921c33"
     },
     {
       "path": "release.json",
       "bytes": 6467,
-      "sha256": "311f577bd5c3b4245dcb7476aa93552e190eb5c8da85ac4bc5b1f417f806d5ee"
+      "sha256": "b5d7bea96d37d62d7f9cb91ae340b2260c953dd397ac0161027a929cb39cd364"
     },
     {
       "path": "tests/Program.cs",
@@ -65,6 +65,16 @@
       "path": "tests/test_worker.py",
       "bytes": 651,
       "sha256": "3a3e1e205814a9f4c9c2590a5efb8c5677c8c28d2e0f81624c0c5a25b1d19043"
+    },
+    {
+      "path": "tests/windows/WindowsPaths.cs",
+      "bytes": 2669,
+      "sha256": "38b36dcf5c7172678e2ce5fe696430d6fd09559190157ebf7b44179c89d49c00"
+    },
+    {
+      "path": "tests/windows/WindowsPaths.csproj",
+      "bytes": 719,
+      "sha256": "e08fcb3771253f2238f83ed267df552c700834814ffa4dba538eab1ef6996c9e"
     },
     {
       "path": "tools.json",

@@ -12,6 +12,9 @@ namespace Igobygod {
  public class Artifact { public string id; public string url; public string hash; public string algorithm; public string file; }
  public class LaunchSettings { public string python; public string install; }
  public static class Core {
+  public static void InitializeFileIO(){AppContext.SetSwitch("Switch.System.IO.UseLegacyPathHandling",false);AppContext.SetSwitch("Switch.System.IO.BlockLongPaths",false);}
+  // Extended Win32 paths also work when the system LongPathsEnabled policy is off.
+  public static string ExtendedIOPath(string path){var full=Path.GetFullPath(path);if(Environment.OSVersion.Platform!=PlatformID.Win32NT)return full;if(full.StartsWith(@"\\?\"))return full;return full.StartsWith(@"\\")?@"\\?\UNC\"+full.Substring(2):@"\\?\"+full;}
   public static string Quote(string s) {
    var b=new StringBuilder("\"");int slashes=0;
    foreach(char c in s){if(c=='\\'){slashes++;continue;} if(c=='"'){b.Append('\\',slashes*2+1);b.Append(c);}else{b.Append('\\',slashes);b.Append(c);}slashes=0;}
@@ -29,11 +32,21 @@ namespace Igobygod {
   public static void CheckLinks(string path){for(var p=new DirectoryInfo(Path.GetFullPath(path));p!=null;p=p.Parent)if(p.Exists&&(p.Attributes&FileAttributes.ReparsePoint)!=0)throw new InvalidOperationException("Choose an installation folder without linked folders in its path.");}
   public static string Hash(string path,string algorithm="sha256") {using(var h=algorithm=="sha512"?(HashAlgorithm)SHA512.Create():SHA256.Create())using(var s=File.OpenRead(path))return BitConverter.ToString(h.ComputeHash(s)).Replace("-","").ToLowerInvariant();}
   public static void Extract(string zip,string output) {
-   if(Directory.Exists(output)||File.Exists(output))throw new IOException("Extraction destination already exists.");
-   using(var z=ZipFile.OpenRead(zip)){
-    foreach(var e in z.Entries){var name=e.FullName.Replace('\\','/');if(name.StartsWith("/")||name.Contains(":")||name.Split('/').Contains("..")||((e.ExternalAttributes>>16)&0xF000)==0xA000||!Within(Path.Combine(output,name),output))throw new InvalidDataException("Unsafe path in downloaded archive.");}
-    var temp=output+".partial-"+Guid.NewGuid().ToString("N");Directory.CreateDirectory(temp);
-    try{z.ExtractToDirectory(temp);Directory.Move(temp,output);}finally{if(Directory.Exists(temp))Directory.Delete(temp,true);}
+   InitializeFileIO();
+   var final=ExtendedIOPath(output);
+   if(Directory.Exists(final)||File.Exists(final))throw new IOException("Extraction destination already exists.");
+   using(var z=ZipFile.OpenRead(ExtendedIOPath(zip))){
+    foreach(var e in z.Entries){var name=e.FullName.Replace('\\','/');if(name.StartsWith("/")||name.Contains(":")||name.Split('/').Contains("..")||((e.ExternalAttributes>>16)&0xF000)==0xA000||!Within(Path.Combine(output,name),output)||(name.EndsWith("/")&&e.Length!=0))throw new InvalidDataException("Unsafe path in downloaded archive.");}
+    var temp=ExtendedIOPath(output+".partial-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(temp);
+    try{
+     foreach(var e in z.Entries){
+      var name=e.FullName.Replace('\\','/');var target=Path.Combine(temp,name.Replace('/',Path.DirectorySeparatorChar));
+      if(name.EndsWith("/")){Directory.CreateDirectory(target);continue;}
+      Directory.CreateDirectory(Path.GetDirectoryName(target));
+      using(var source=e.Open())using(var destination=new FileStream(target,FileMode.CreateNew,FileAccess.Write))source.CopyTo(destination);
+     }
+     Directory.Move(temp,final);
+    }finally{if(Directory.Exists(temp))Directory.Delete(temp,true);}
    }
   }
   public static T ReadJson<T>(string path){using(var s=File.OpenRead(path))return (T)new DataContractJsonSerializer(typeof(T)).ReadObject(s);}

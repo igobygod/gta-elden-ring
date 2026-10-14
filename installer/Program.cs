@@ -10,6 +10,7 @@ using Microsoft.Win32;
 namespace Igobygod {
  static class Program {
   [STAThread] static void Main(string[] args){
+   Core.InitializeFileIO();
    System.Net.ServicePointManager.SecurityProtocol=System.Net.SecurityProtocolType.Tls12;
    Application.EnableVisualStyles();Application.SetCompatibleTextRenderingDefault(false);
    try{if(args.Length==2&&args[0]=="--play"){Engine.Play(args[1]);return;}Application.Run(new SetupForm());}
