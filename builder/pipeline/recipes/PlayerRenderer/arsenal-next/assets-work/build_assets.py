@@ -11,6 +11,10 @@ names=['unarmed','pistol','smg','shotgun','rifle','sniper','launcher','grenade']
 models=['','w_pi_pistol_hi','w_sb_smg_hi','w_sg_pumpshotgun_hi','w_ar_assaultrifle_hi','w_sr_sniperrifle_hi','w_lr_grenadelauncher_hi','w_ex_grenadefrag_hi']
 atlas=Image.open(R/'PlayerRenderer/rifle-stage/atlas.png').convert('RGBA');assert atlas.size==(4096,4096)
 textures=list((R/'Assets').rglob('*.dds'))+list((O/'donor').rglob('*.dds'));texmap={x.stem.lower():x for x in textures}
+# The shared decal tile is first allocated by the pistol. Use its own dictionary,
+# rather than whichever unrelated weapon's identically named decal is enumerated last.
+for texture in (R/'Assets/GTA-Franklin/x64e.rpf/w_pi_pistol.ytd').glob('w_at_weapondecals*.dds'):
+ texmap[texture.stem.lower()]=texture
 # Free rows 7 and 4-5 after existing rifle seven tiles; 256 tiles in lower half except FX row6 and rifle row4 first half.
 slots=[(x,y) for y in [3584,3840,2560,2816,2304,2048] for x in range(0,4096,256) if not(y==2048 and x<3584) and not(y==2304 and x<3584)]
 tilecache={};reports=[];records=[]

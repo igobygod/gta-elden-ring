@@ -41,6 +41,9 @@ namespace Igobygod {
    var psi=new ProcessStartInfo(Environment.GetEnvironmentVariable("COMSPEC")??"cmd.exe","/d /s /c \"\""+bat+"\" >nul && set\""){UseShellExecute=false,CreateNoWindow=true,RedirectStandardOutput=true,RedirectStandardError=true};
    using(var p=Process.Start(psi)){string text=p.StandardOutput.ReadToEnd();string error=p.StandardError.ReadToEnd();p.WaitForExit();File.AppendAllText(log,error);if(p.ExitCode!=0)throw new IOException("Microsoft C++ tools could not be initialized.");foreach(var line in text.Split('\n')){int i=line.IndexOf('=');if(i>0)env[line.Substring(0,i)]=line.Substring(i+1).TrimEnd('\r');}}
    env["CC"]=clang;env["CXX"]=clang;
+   // vcvars sets Platform=x64, changing SDK-style C# output paths to bin/x64/...
+   // Native compilers keep their x64 VSCMD/LIB/INCLUDE settings; managed tools use the expected layout.
+   env["Platform"]="AnyCPU";
   }
   public void Install(string gta,string er,string destination){
    if(Environment.OSVersion.Platform!=PlatformID.Win32NT||!Environment.Is64BitOperatingSystem)throw new InvalidOperationException("This installer needs 64-bit Windows 10 or 11.");

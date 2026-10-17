@@ -8,13 +8,13 @@
     },
     {
       "path": "Core.cs",
-      "bytes": 6908,
-      "sha256": "049441eeaedeed214e1042f3a0d5d183d7fde969369bd49592d66c36606b9093"
+      "bytes": 7176,
+      "sha256": "73b46ce4a7ea41c700bd9e666f1338c02fc5d784ebd6bdb027664267d8bedb8d"
     },
     {
       "path": "Engine.cs",
-      "bytes": 10748,
-      "sha256": "ea21d7669137f4e69e834e92fea19a3fd84d04c298c690ed5220bdbfafeb30d4"
+      "bytes": 10964,
+      "sha256": "fc72223b105d0bb05cb45057f090523c92fb8c1b8af429af54490b266c9a2eb5"
     },
     {
       "path": "LICENSE.txt",
@@ -23,13 +23,13 @@
     },
     {
       "path": "Program.cs",
-      "bytes": 8056,
-      "sha256": "ad50e2de9091128117604c42251f49b4a2b2aab1aad75dce1219295ec98b573e"
+      "bytes": 7921,
+      "sha256": "3c4b7d018913e40a30b0b731769ef93e82f080db785c081d9c787abdf44ae68d"
     },
     {
       "path": "Setup.csproj",
       "bytes": 1475,
-      "sha256": "e9f113b7478f47a335cab3043ca236e655b30b70c4cf5e4e34b0ea15e0f6aea1"
+      "sha256": "d28a0d7034c66b373c012661d7f1264f1f106ae6803ae548882e42b5dd6ba746"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -39,22 +39,22 @@
     {
       "path": "app.manifest",
       "bytes": 826,
-      "sha256": "f7a19cfac3b2897b440614360773452dfc4216a1ad70d2a85eda82b3a0cdef03"
+      "sha256": "86c77c47e24c2846623d732aaf31e7db9448e0e18d3c57ffc9d72c4b0cacd750"
     },
     {
       "path": "payload.zip",
-      "bytes": 419184,
-      "sha256": "cba27d375df4a28a52c006640de56db1213eab77e66f1c3933b8899a60921c33"
+      "bytes": 420037,
+      "sha256": "0ed21bba94fbb37aebab8bda1131651065880c9b4bf4926fb6ff9700b0f01dc2"
     },
     {
       "path": "release.json",
-      "bytes": 6467,
-      "sha256": "b5d7bea96d37d62d7f9cb91ae340b2260c953dd397ac0161027a929cb39cd364"
+      "bytes": 6765,
+      "sha256": "6a4e04d86a6dc3ae705842572814c4ae0439ad7f1441140c8e77a36a786ee91b"
     },
     {
       "path": "tests/Program.cs",
-      "bytes": 4870,
-      "sha256": "3127865f0ff1b18c4c77d1f18388f5adaa0f33f2253f7bea4e2bc566698823f1"
+      "bytes": 5309,
+      "sha256": "e8a82e2cd9892ffa4ccc5374558c9372c5007c218067f0e34f140d4e2b9aed13"
     },
     {
       "path": "tests/Tests.csproj",

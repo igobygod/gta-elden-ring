@@ -153,7 +153,7 @@ def actions(args):
     palm=','.join(f'{v:.9f}f' for v in (attachment[0][3],0,attachment[2][3]))
     source=p/'polish-v4.6/sword/sword_attack.h.in'
     source.with_suffix('').write_text(source.read_text().replace('@PALM@',palm))
-    print('Action packet build complete; gameplay validation remains separate.',flush=True)
+    print('Action packets built.',flush=True)
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)

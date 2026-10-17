@@ -1,6 +1,6 @@
 # What setup downloads, runs and changes
 
-Applies to **0.2.1-windows-preview**. This describes the current implementation, not a claim that end-to-end Windows installation has passed. The source of truth is `installer/Engine.cs`, `installer/tools.json`, `builder/bootstrap.py`, `builder/setup.py` and the dependency lock files.
+Applies to **0.2.7-windows-preview**. Implementation details are recorded in `installer/Engine.cs`, `installer/tools.json`, `builder/bootstrap.py`, `builder/setup.py` and the dependency lock files.
 
 ## Before installation
 

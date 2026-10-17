@@ -73,7 +73,10 @@ namespace Igobygod {
    using(var writer=new StreamWriter(log,true)){using(var p=new Process()){p.StartInfo=info;
     DataReceivedEventHandler handler=(s,e)=>{if(e.Data!=null)lock(gate){writer.WriteLine(e.Data);writer.Flush();output.AppendLine(e.Data);}};
     p.OutputDataReceived+=handler;p.ErrorDataReceived+=handler;p.Start();p.BeginOutputReadLine();p.BeginErrorReadLine();p.WaitForExit();
-    if(p.ExitCode!=0&&!accepted.Contains(p.ExitCode))throw new InvalidOperationException(Path.GetFileName(exe)+" stopped (code "+p.ExitCode+"). Open the setup log for details.");
+    if(p.ExitCode!=0&&!accepted.Contains(p.ExitCode)){
+     var detail=output.ToString().Split(new[]{'\r','\n'},StringSplitOptions.RemoveEmptyEntries).LastOrDefault(line=>line.StartsWith("Setup stopped: ",StringComparison.Ordinal)||line.StartsWith("Asset build stopped: ",StringComparison.Ordinal));
+     throw new InvalidOperationException(detail??(Path.GetFileName(exe)+" stopped (code "+p.ExitCode+"). Open the setup log for details."));
+    }
    }}return output.ToString();
   }
  }

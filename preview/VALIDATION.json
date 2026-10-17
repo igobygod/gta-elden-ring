@@ -1,24 +1,53 @@
 {
-  "version": "0.2.1-windows-preview",
-  "author": "igobygod",
+  "version": "0.2.7-windows-preview",
   "windows_installation_enabled": true,
-  "executable_architecture": "Windows x64 .NET Framework 4.8 GUI",
-  "build": "passed, zero warnings and errors",
-  "core_checks": "passed: paths, quoting, empty folders, retries, archive containment, extraction, process arguments and error propagation",
-  "worker_check": "passed",
-  "existing_builder_unit_tests": 24,
-  "embedded_resources": "verified byte-for-byte against release inputs",
-  "privacy_scan": "passed",
+  "installation_test": {
+    "os": "Windows 11 LTSC ARM64 VM",
+    "tool_architecture": "x64",
+    "completed": true,
+    "files_checked": 35,
+    "files_intact": 35
+  },
+  "native_windows_gameplay_verified": false,
   "game_assets_bundled": false,
   "code_signed": false,
-  "native_windows_installation_verified": false,
-  "native_windows_gameplay_verified": false,
-  "windows_long_path_regression": {
-    "os": "Windows 11 LTSC ARM64 VM",
-    "executable": ".NET Framework x64 under emulation",
-    "LongPathsEnabled": 0,
-    "previous_code": "DirectoryNotFoundException reproduced",
-    "fixed_code": "310-character final path passed, including traversal rejection and UNC/extended prefix conversion",
-    "complete_cached_dotnet_sdk_archive": "extraction passed; fixture cleaned"
+  "asset_comparison": {
+    "byte_identical_files": 29,
+    "total_files": 35,
+    "original_mod_assets_checked": 23,
+    "original_mod_assets_matching": 23,
+    "decrypted_parameter_entries": 194,
+    "decrypted_parameter_entries_matching": 194
+  },
+  "melee_comparison": {
+    "clips": 64,
+    "timings_and_sword_anchors_exact": true,
+    "equivalent_quaternion_error_max": 1.14e-13,
+    "translation_error_max_m": 5.56e-16
+  },
+  "roll_jump_comparison": {
+    "clips": 62,
+    "timings_exact": true,
+    "different_position_values": 2,
+    "position_error_max_m": 1.4551915228366852e-11
+  },
+  "vehicle_comparison": {
+    "numerical_geometry_and_topology_match": true,
+    "signed_zero_differences": 116
+  },
+  "payload_integrity": "Exact size and SHA-256 checks, including verified Windows variants; altered files rejected.",
+  "graphics_test": {
+    "adapter": "Parallels Display Adapter (WDDM)",
+    "feature_levels": [
+      "11_0",
+      "11_1"
+    ],
+    "feature_level_12_0_result": "DXGI_ERROR_UNSUPPORTED",
+    "base_game_startup": "crash"
+  },
+  "windows_path_tests": {
+    "long_paths_enabled": false,
+    "sdk_extraction": "passed",
+    "archive_traversal_rejection": "passed"
   }
 }

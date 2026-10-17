@@ -1,10 +1,53 @@
 {
-  "version": "0.2.1-windows-preview",
+  "version": "0.2.7-windows-preview",
   "windows_installation_enabled": true,
-  "native_windows_end_to_end_verified": false,
+  "installation_test": {
+    "os": "Windows 11 LTSC ARM64 VM",
+    "tool_architecture": "x64",
+    "completed": true,
+    "files_checked": 35,
+    "files_intact": 35
+  },
   "native_windows_gameplay_verified": false,
-  "previous_macOS_builder_validation": "Full local build and launch smoke test passed in 0.1.0; see prior report.",
-  "distribution": "source plus setup UI only; no game assets",
-  "windows_long_path_extraction_regression": "Passed in Windows 11 LTSC ARM64 VM, .NET Framework x64 executable under emulation; LongPathsEnabled=0. This is not full installation or gameplay validation.",
-  "windows_full_sdk_extraction_regression": "Passed in Windows 11 LTSC ARM64 VM with LongPathsEnabled=0, running x64 .NET Framework under emulation."
+  "game_assets_bundled": false,
+  "code_signed": false,
+  "asset_comparison": {
+    "byte_identical_files": 29,
+    "total_files": 35,
+    "original_mod_assets_checked": 23,
+    "original_mod_assets_matching": 23,
+    "decrypted_parameter_entries": 194,
+    "decrypted_parameter_entries_matching": 194
+  },
+  "melee_comparison": {
+    "clips": 64,
+    "timings_and_sword_anchors_exact": true,
+    "equivalent_quaternion_error_max": 1.14e-13,
+    "translation_error_max_m": 5.56e-16
+  },
+  "roll_jump_comparison": {
+    "clips": 62,
+    "timings_exact": true,
+    "different_position_values": 2,
+    "position_error_max_m": 1.4551915228366852e-11
+  },
+  "vehicle_comparison": {
+    "numerical_geometry_and_topology_match": true,
+    "signed_zero_differences": 116
+  },
+  "payload_integrity": "Exact size and SHA-256 checks, including verified Windows variants; altered files rejected.",
+  "graphics_test": {
+    "adapter": "Parallels Display Adapter (WDDM)",
+    "feature_levels": [
+      "11_0",
+      "11_1"
+    ],
+    "feature_level_12_0_result": "DXGI_ERROR_UNSUPPORTED",
+    "base_game_startup": "crash"
+  },
+  "windows_path_tests": {
+    "long_paths_enabled": false,
+    "sdk_extraction": "passed",
+    "archive_traversal_rejection": "passed"
+  }
 }

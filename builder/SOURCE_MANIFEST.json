@@ -8,8 +8,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10468,
-      "sha256": "25d48069815db5675d165688e03d0cc02aa0d5057bb9610ba43b8fb55b8f03f2"
+      "bytes": 10190,
+      "sha256": "9197849e4d939fd6a0a97912cf79a9d4cd5545d0f0b9e7963c6ec2eb2458afba"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -18,8 +18,8 @@
     },
     {
       "path": "VALIDATION.json",
-      "bytes": 708,
-      "sha256": "8d86ab7489797948475f16f970ce8f541551c80f28097a19ba4c212975dad160"
+      "bytes": 1550,
+      "sha256": "95ad1625d4beb263cf00e2d8fdf4d41c43a355b8fba58bf29541022936262403"
     },
     {
       "path": "bootstrap.py",
@@ -68,8 +68,8 @@
     },
     {
       "path": "pipeline/er/er_pipeline.py",
-      "bytes": 9594,
-      "sha256": "54440edf77f5f11ef6c7802e3699f26836694c4d0acd842ee289f92352f71a80"
+      "bytes": 9548,
+      "sha256": "2d48f1102e7989f6740f451be4559a8acf0ba71f571fcff8da8978fa038b4a15"
     },
     {
       "path": "pipeline/er/oodle-helper/Cargo.lock",
@@ -198,8 +198,8 @@
     },
     {
       "path": "pipeline/recipes/PlayerRenderer/arsenal-next/assets-work/build_assets.py",
-      "bytes": 9841,
-      "sha256": "9412995d05140392412955ce78cff6f42194ed97a31c9cfc92e30090440e48a1"
+      "bytes": 10146,
+      "sha256": "8175cf52f4676450f2956e448d02b01cc469c20ae92904031c72c26f5fc605ff"
     },
     {
       "path": "pipeline/recipes/PlayerRenderer/arsenal-next/assets-work/build_projectile.py",
@@ -243,8 +243,8 @@
     },
     {
       "path": "pipeline/recipes/PlayerRenderer/polish-fix/rpg/build_rpg.py",
-      "bytes": 4436,
-      "sha256": "78fcf0b99dfe833396457954403af8e4ecc2b5b3487bf5f7390a11891bbccae7"
+      "bytes": 4865,
+      "sha256": "6491f1edad8e6a83cb3de4c0e98de2b3296c27d08592983d3c94a7c60bbdbf40"
     },
     {
       "path": "pipeline/recipes/PlayerRenderer/polish-fix/rpg/build_rpg_joints.py",
@@ -373,8 +373,8 @@
     },
     {
       "path": "release.json",
-      "bytes": 6467,
-      "sha256": "b5d7bea96d37d62d7f9cb91ae340b2260c953dd397ac0161027a929cb39cd364"
+      "bytes": 6765,
+      "sha256": "6a4e04d86a6dc3ae705842572814c4ae0439ad7f1441140c8e77a36a786ee91b"
     },
     {
       "path": "requirements-build.txt",
@@ -449,7 +449,7 @@
     {
       "path": "runtime/PUBLIC_FILES.json",
       "bytes": 21514,
-      "sha256": "8818b744060474b610f9cb29acd07f8adbc27e1bb8a893d84bc03445422a97cd"
+      "sha256": "d1a4fbf478269fd4300a0f3837954f7d3d6cc2c9cb78ffe347054d00a6cf4b14"
     },
     {
       "path": "runtime/PlayerRenderer/Cargo.lock",
@@ -1028,8 +1028,8 @@
     },
     {
       "path": "runtime/PlayerRenderer/src/windows_swapchain.h",
-      "bytes": 7622,
-      "sha256": "35ede3cbdc1b9e2ba222d10b34cc21b84b322e478569a2f8915f3aedaf64253b"
+      "bytes": 7593,
+      "sha256": "05df1c3324d05f99a9f69079ed78804abfec5c9018eafac1c9c67a0fdca7690d"
     },
     {
       "path": "runtime/README-RUNTIME.md",
@@ -1118,8 +1118,8 @@
     },
     {
       "path": "setup.py",
-      "bytes": 15189,
-      "sha256": "5c8a5a3a7a5f9fd2de96a8b373bfd66d83435c24c2f8b107c1b2203a00fe5ce1"
+      "bytes": 15420,
+      "sha256": "95049cb844db6e966f7743d8b427e8d3cf6458c954dec3d1fec3ac668a75df04"
     },
     {
       "path": "windows_worker.py",

@@ -78,7 +78,7 @@ static bool install(){
   log("Native Windows hook activation failed; drawing disabled until restart");
   g_failed=true;cleanup();return true;
  }
- cleanup();log("Native Windows swapchain hooks installed; gameplay validation pending");return true;
+ cleanup();log("Native Windows swapchain hooks installed");return true;
 }
 }
 static ID3D12CommandQueue* native_windows_queue(IDXGISwapChain*sc,ID3D12Device*dev){return windows_swapchain::for_swapchain(sc,dev);}

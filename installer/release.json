@@ -1,6 +1,6 @@
 {
   "name": "igobygod GTA x Elden Ring",
-  "version": "0.2.1-windows-preview",
+  "version": "0.2.7-windows-preview",
   "release_ready": false,
   "elden_ring_sha256": "1a3547101327f65d0c76da2f9190ac0aa66871ea42bae2aecc61e11a8b597891",
   "elden_ring_file_version": "1.17.1.0",
@@ -13,19 +13,19 @@
     },
     "Windows": {
       "build_ready": true,
-      "build_verified": false,
+      "build_verified": true,
       "launcher_verified": false,
       "gameplay_verified": false,
       "blockers": [
-        "Windows native installation and gameplay testing remain pending."
+        "Gameplay on supported Windows x64 hardware is untested."
       ],
-      "installation_enabled": true
+      "installation_enabled": true,
+      "build_environment": "Windows 11 LTSC ARM64 VM; x64 tools"
     }
   },
   "blockers": [
-    "Interactive macOS gameplay validation remains pending.",
-    "Native Windows clean installation and gameplay remain unverified.",
-    "Availability of the supported executable hash across retail/Steam installations has not been established."
+    "Windows x64 gameplay is untested.",
+    "Retail/Steam executable compatibility beyond the accepted hash is untested."
   ],
   "payload": [
     {
@@ -106,7 +106,10 @@
     {
       "path": "runtime/data/melee-joints.bin",
       "bytes": 34294880,
-      "sha256": "3e30321b73fc30c7cb32946d76e440d581538cad5e4ef58792197f1a7e2488e5"
+      "sha256": "3e30321b73fc30c7cb32946d76e440d581538cad5e4ef58792197f1a7e2488e5",
+      "platform_sha256": {
+        "Windows": "de67409470e2b13385eb04e7affd050427a0f5f7efe563b25dd1616d9cebb9a3"
+      }
     },
     {
       "path": "runtime/data/sword-fallback-attachment.bin",
@@ -126,12 +129,18 @@
     {
       "path": "runtime/data/buffalo2.carbin",
       "bytes": 862744,
-      "sha256": "2e4a9e0964e3450b66b7bac44edf20efe57f64ce3a5c050d72089a295c1d8a74"
+      "sha256": "2e4a9e0964e3450b66b7bac44edf20efe57f64ce3a5c050d72089a295c1d8a74",
+      "platform_sha256": {
+        "Windows": "aa1a4200b15956665663f156cdfde42f024a81340a3220b96c605bb0af126167"
+      }
     },
     {
       "path": "runtime/data/roll.bin",
       "bytes": 674611956,
-      "sha256": "52a2eb22b827e3b4ba55776f3a3bb978358dcf3bfbec6b829f8bddbd00a713b1"
+      "sha256": "52a2eb22b827e3b4ba55776f3a3bb978358dcf3bfbec6b829f8bddbd00a713b1",
+      "platform_sha256": {
+        "Windows": "676e42125492f359ee521b73f587e15e588c74d610d2ee282864165216d77165"
+      }
     },
     {
       "path": "runtime/data/death.bin",

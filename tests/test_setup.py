@@ -45,6 +45,32 @@ class SetupTests(unittest.TestCase):
         expected = hashlib.sha256(b'owned-test-fixture').hexdigest()
         self.assertEqual(installer.validate_executable(er/'eldenring.exe', expected), expected)
 
+    def test_platform_fingerprint_keeps_exact_corruption_checks(self):
+        stage = self.root/'stage'; stage.mkdir()
+        file = stage/'animation.bin'; file.write_bytes(b'windows-animation')
+        digest = hashlib.sha256(file.read_bytes()).hexdigest()
+        requirement = {'path':'animation.bin', 'bytes':17,
+                       'sha256':hashlib.sha256(b'mac-animation').hexdigest(),
+                       'platform_sha256':{'Windows':digest}}
+        with patch.object(installer.platform, 'system', return_value='Windows'):
+            self.assertEqual(installer.validate_payload(stage,[requirement])['animation.bin']['sha256'],digest)
+            file.write_bytes(b'corrupt-animation')
+            with self.assertRaisesRegex(installer.SetupError,'differs'):
+                installer.validate_payload(stage,[requirement])
+        file.write_bytes(b'windows-animation')
+        with patch.object(installer.platform, 'system', return_value='Darwin'):
+            with self.assertRaisesRegex(installer.SetupError,'differs'):
+                installer.validate_payload(stage,[requirement])
+
+    def test_all_fingerprint_mismatches_are_reported_together(self):
+        stage = self.root/'stage'; stage.mkdir()
+        for name in ('car.bin','animation.bin'):(stage/name).write_bytes(b'fixture')
+        requirements = [{'path':name,'sha256':'0'*64} for name in ('car.bin','animation.bin')]
+        with self.assertRaises(installer.SetupError) as error:
+            installer.validate_payload(stage, requirements)
+        self.assertIn('car.bin',str(error.exception))
+        self.assertIn('animation.bin',str(error.exception))
+
     def test_output_cannot_overlap_game_or_package(self):
         gta, er = self.games(); package = self.root/'package'; package.mkdir()
         for output in [gta, gta/'mod', er.parent, self.root, package/'install']:

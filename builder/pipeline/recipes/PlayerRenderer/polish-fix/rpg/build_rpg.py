@@ -1,13 +1,19 @@
 import os
 from pathlib import Path
-import sys,json,struct,xml.etree.ElementTree as E
+import sys,json,struct,re,xml.etree.ElementTree as E
 import numpy as np
 from PIL import Image
 R=Path(os.environ['IGOBYGOD_BUILD_ROOT']);O=Path(__file__).resolve().parent
 sys.path.insert(0,str(R/'PlayerRenderer'));from fix_rifle_materials import bake_weapon_palette
 sys.path.insert(0,str(R/'PlayerRenderer/rifle-next'));from armed_motion import Exporter,Clip
 ex=Exporter(O);p=ex.p
-texmap={x.stem.lower():x for x in (R/'Assets').rglob('*.dds')}
+# Filesystem enumeration differs between Windows and macOS. Prefer the high-detail
+# diffuse dictionary and the normal palette over lower-detail copies with the same names.
+def texture_rank(path):
+ dictionary=path.parent.name.lower()
+ quality=2 if dictionary.endswith('+hi.ytd') else 0 if re.search(r'_l[1-9](?:_|\.)',dictionary) else 1
+ return quality,path.relative_to(R/'Assets').as_posix().lower()
+texmap={x.stem.lower():x for x in sorted((R/'Assets').rglob('*.dds'),key=texture_rank)}
 atlas=Image.open(R/'PlayerRenderer/rifle-stage/atlas.png').convert('RGBA');tile=0;cache={};reports=[]
 for projectile,model in [(False,'w_lr_rpg_hi'),(True,'w_lr_rpg_rocket')]:
  xml=next((R/'Assets').rglob(model+'.ydr.xml'));root=E.parse(xml).getroot();bones=root.findall('Skeleton/Bones/Item')

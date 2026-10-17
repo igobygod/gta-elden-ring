@@ -1,39 +1,20 @@
-# Maintainer instructions
+# Development
 
-Players use the setup EXE. The commands here are only for developers working on the source. Do not build game-derived assets inside this checkout or commit a completed installation.
+`builder/` contains conversion recipes and runtime source. `installer/payload.zip` embeds the same files in the Windows setup executable.
 
-## Source layout and snapshot
+## Build setup
 
-`builder/` is a readable, byte-for-byte extraction of `installer/payload.zip`. `installer/` contains the GUI release source and source manifest. The committed preview binary is rebuilt for 0.2.1 with the Windows long-path extraction fix. The two copies are intentional: one is browsable on GitHub, and one is the exact embedded setup payload.
-
-From the repository root, Python 3 checks the source manifests and payload consistency:
-
-```sh
-python scripts/payload.py
-```
-
-After intentional changes to `builder/` or `installer/`, regenerate the manifests and payload, then review the diff:
+With Python 3 and the .NET 8 SDK installed, run from the repository root:
 
 ```sh
 python scripts/payload.py --refresh
 python scripts/payload.py
-```
-
-The refresh script copies `builder/release.json` and `builder/windows_worker.py` into the installer resources. It refuses common game/binary/cache types in the builder source. This check does not replace a full privacy, game-data and license review. Update `runtime/PUBLIC_FILES.json` and related internal runtime manifests if their source inventory changes, following their existing format.
-
-Refreshing the payload does **not** update `preview/igobygod Setup.exe`. Rebuild, test, and deliberately replace release artifacts and checksums for each new preview version. Keep historical validation claims separate from new results.
-
-## Build the Windows GUI
-
-With the .NET 8 SDK installed:
-
-```sh
 dotnet build installer/Setup.csproj -c Release
 ```
 
-The project targets Windows x64 .NET Framework 4.8 and restores Microsoft's framework reference assemblies from NuGet. Output is `installer/bin/Release/net48/igobygod Setup.exe`. The source ZIP is embedded at build time. The GUI build itself does not need either game's assets. Running the GUI requires Windows and .NET Framework 4.8. A successful cross-build on macOS does not prove Windows execution or gameplay.
+Output: `installer/bin/Release/net48/igobygod Setup.exe`. The GUI targets Windows x64 and .NET Framework 4.8. Building the setup executable does not require game assets. Building the game-specific runtime does; see [builder/README.md](../builder/README.md).
 
-## Relevant checks
+## Tests
 
 ```sh
 dotnet run --project installer/tests/Tests.csproj
@@ -42,22 +23,19 @@ python -m unittest discover -s tests
 python builder/runtime/tests/run_policies.py
 ```
 
-For the Windows .NET Framework path regression, build and run the dedicated test executable in Windows without changing the system long-path policy:
+The process tests need `dotnet` on PATH or `DOTNET_HOST_PATH` set to its location. Runtime policy tests need a C++ compiler.
+
+Windows path tests run under .NET Framework:
 
 ```sh
 dotnet build installer/tests/windows/WindowsPaths.csproj -c Release
 installer/tests/windows/bin/Release/net48/WindowsPaths.exe
 ```
 
-An optional `--sdk <downloaded-dotnet.zip>` argument exercises the full SDK archive at a deliberately long temporary destination and removes that fixture afterwards. Do not point test outputs at a game installation or existing mod installation.
+`--sdk <archive.zip>` also tests full SDK extraction at a long temporary path.
 
-The core process tests require `dotnet` on PATH or `DOTNET_HOST_PATH` pointing to it. Runtime policy tests require a C++ compiler. Run only the checks relevant to the change, then complete native Windows acceptance testing before claiming Windows readiness. The existing builder README contains advanced conversion prerequisites and platform-specific commands; the Windows GUI automates those for players.
+## Packaging
 
-## Release hygiene
+Refresh the embedded payload before building. Copy the resulting EXE to `preview/`, update its guide and checksums, and verify the embedded resources against `installer/`. `SOURCE_MANIFEST.json` records each source file's size and SHA-256.
 
-- Confirm `release.json` states the exact supported executable and truthful verification flags.
-- Verify no local game assets, generated headers, compiled game-specific DLL, saves, log files, credentials or personal paths entered the repository.
-- Retain all third-party notices. Review the CodeWalker educational source notice before any broader public release.
-- Include the unsigned/code-signing status, installation disclosures, required games and native Windows testing status in release notes.
-- Generate checksums after building the final artifacts. Do not describe a binary as matching changed source unless its embedded resources have been verified.
-- Use an experimental/pre-release designation until the documented acceptance criteria pass. Keep repository visibility private unless the owner explicitly requests otherwise.
+Local conversion outputs belong outside the checkout. Completed installations, generated headers, game-specific runtime DLLs, tools, logs, saves and credentials are excluded from source packages. The original-code license and third-party notices accompany the source.

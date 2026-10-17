@@ -63,6 +63,7 @@ def local_path(stage, name):
 
 def validate_payload(stage, requirements):
     result = {}
+    mismatches = []
     for item in requirements:
         p = local_path(stage, item['path'])
         if not p.is_file(): raise SetupError(f'Generated payload is missing {item["path"]}')
@@ -70,9 +71,13 @@ def validate_payload(stage, requirements):
         if size < item.get('min_bytes', 1): raise SetupError(f'Generated payload is too small: {item["path"]}')
         if 'bytes' in item and size != item['bytes']: raise SetupError(f'Wrong generated size: {item["path"]}')
         digest = sha256(p)
-        if 'sha256' in item and item['sha256'] != digest:
-            raise SetupError(f'Generated payload differs from validated build: {item["path"]}')
+        expected = item.get('platform_sha256', {}).get(platform.system(), item.get('sha256'))
+        if expected is not None and expected != digest:
+            mismatches.append(item["path"])
+            print(f'Fingerprint mismatch: {item["path"]}; expected {expected}; generated {digest}', flush=True)
         result[item['path']] = {'bytes': size, 'sha256': digest}
+    if mismatches:
+        raise SetupError("Generated payload differs from validated build: " + ", ".join(mismatches))
     return result
 
 def commit_install(staged, destination):
@@ -198,7 +203,7 @@ def main(argv=None):
         blockers=platform_status.get('blockers',manifest.get('blockers',['This platform has not passed its clean-build acceptance test.']))
         raise SetupError('Installation is not enabled for this platform:\n- ' + '\n- '.join(blockers))
     if not manifest.get('release_ready'):
-        print('Validation candidate: build acceptance and gameplay validation are separate. See README.',flush=True)
+        print('Installing Windows preview.',flush=True)
     if not args.output: raise SetupError('Specify --output with a new folder for the local mod.')
     output=validate_output(args.output, [gta, er, PACKAGE])
     check_prerequisites(system); ensure_game_closed()

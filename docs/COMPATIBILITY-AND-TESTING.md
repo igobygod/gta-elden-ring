@@ -1,46 +1,39 @@
-# Compatibility and testing status
+# Compatibility and testing
 
-**Experimental preview, not release-ready.** The preview is enabled for testing but has not passed a native Windows end-to-end installation or gameplay session.
+## Supported configuration
 
-## Current compatibility boundary
+- Windows 10/11 x64, .NET Framework 4.8 and a DirectX 12 GPU with feature level 12.0 or higher.
+- GTA V Legacy. Enhanced is unsupported.
+- Elden Ring executable matching the SHA-256 in `builder/release.json`.
+- Offline mode, separate mod save and keyboard/mouse controls.
+- English UI/death-message assets and Limgrave/overworld map data.
 
-- Elden Ring file version 1.17.1.0 with the single SHA-256 in `builder/release.json`. The same hash must pass setup, launch and runtime checks. A matching displayed version alone is insufficient.
-- Availability of that exact executable on normal retail/Steam installations is unverified. This must be established before promoting a general release.
-- GTA V Legacy is the asset source. Enhanced is unsupported. Changed Legacy archives can fail conversion or expected output checks; no all-Legacy-version claim is made.
-- Windows x64 10/11 and .NET Framework 4.8 are the intended GUI environment. Windows ARM, Linux/Proton and consoles are unsupported by this installer.
-- The earlier macOS builder used CrossOver/D3DMetal. That does not establish generic Wine/DXVK support or Windows compatibility.
-- Offline play, separate mod save, keyboard/mouse custom controls, English-targeted UI/death assets. Other languages/controller mappings and other mods are not validated.
-- The Buffalo feature is a prototype. Full-world radar/map coverage is not claimed; the current data targets Limgrave/overworld. Native two-hand-left weapon grip is unsupported.
-- No automatic updates or dynamic game-version adapters. Removing a hash check does not adapt game offsets, hooks, parameters or conversion recipes.
+Other executable hashes, other mods, controller mappings and all-version compatibility are untested. The Buffalo feature is a prototype; native two-hand-left grip is unsupported.
 
-## Recorded checks before this GitHub preview
+## Completed tests
 
-| Check | Result and scope |
+| Check | Result |
 | --- | --- |
-| Windows setup compilation | Passed, zero warnings/errors; x64 .NET Framework 4.8 GUI |
-| Installer core checks | Passed: path quoting/containment, empty folders, retry markers, archive extraction, child process arguments and failure propagation |
-| Hidden worker wrapper | Argument/exit propagation test passed |
-| Builder unit checks | 24 passed |
-| Embedded resources | Verified byte-for-byte against the release inputs |
-| Source/privacy packaging audit | Passed for the packaged inputs; no game assets included |
-| Earlier macOS clean asset build | Completed; 35 installed files passed integrity verification |
-| Earlier macOS launcher smoke | Runtime/assets loaded and graphics initialized; no interactive gameplay verification |
-| Native Windows clean installation | **Not performed** |
-| Native Windows gameplay | **Not performed** |
-| Digital signing | **Not signed** |
+| Full installation | Completed in Windows 11 LTSC ARM64 with x64 tools |
+| Installed-file integrity | All 35 files match the installation receipt |
+| Reference comparison | 29 of 35 files byte-identical |
+| Melee animation | All 64 clips equivalent; timing and sword anchors exact |
+| Roll/jump animation | All 62 clips checked; two position values differ by at most 1.46e-11 metres |
+| Vehicle | Geometry, materials and topology match; 116 signed-zero differences |
+| Gameplay parameters | All 194 decrypted archive entries match |
+| Original mod assets | 23 checked files match the reference |
+| Runtime startup | Character, weapons, animation and vehicle packets load; hooks initialize |
+| File corruption | Altered payloads rejected |
+| Long Windows paths | .NET SDK extraction passes with the system long-path setting disabled |
+| Gameplay on supported Windows hardware | Untested |
+| Code signing | Unsigned |
 
-Version 0.2.1 fixes the ZIP extraction path failure reproduced in Windows 11 LTSC ARM64 with .NET Framework 4.8.1 and `LongPathsEnabled=0`. The x64 regression executable runs under emulation. The previous code failed with `DirectoryNotFoundException`; the updated code passes a 310-character path test and preserves traversal rejection. This targeted test does not establish support for running Elden Ring in that VM or Windows on ARM generally.
+The rebuilt Windows DLL differs from the CrossOver-built reference. Windows rendering and gameplay need testing on a supported GPU. The test VM's Parallels adapter rejects DirectX feature level 12.0; the base game also crashes there without the mod.
 
-The macOS results are prior recorded results, not tests rerun during repository publication. They cannot certify Windows behavior. Machine-readable setup status is in [preview/VALIDATION.json](../preview/VALIDATION.json). The embedded builder retains its original validation records.
+The earlier macOS build passed installation and launch checks through CrossOver/D3DMetal. Those results do not establish Windows gameplay compatibility.
 
-## Windows acceptance checklist — all pending
+## Known installation limits
 
-1. Confirm normal Steam/retail executable compatibility and record edition/version without distributing the executable.
-2. Test a fresh Windows 10/11 x64 setup with no developer tools installed: folder detection/Browse, paths containing spaces, download interruption/retry, denied admin permission and restart handling.
-3. Verify Microsoft/portable tool setup, local asset conversion and final mod generation complete; inspect logs for failures.
-4. Verify the desktop shortcut, normal Steam launch requirements, offline profile and separate save. Confirm normal game files/save are unchanged.
-5. Exercise movement, roll/jump/lock-on, aiming, every weapon class, reload, weapon wheel, cheat console, HUD/WASTED, sword and Buffalo spawn/clear.
-6. Test quit/relaunch, failed install recovery, removal, and that missing/modified generated files fail safely.
-7. Record GPU/driver, Windows edition/build, game versions, mod commit and findings. Redact personal paths before posting.
+First setup requires internet access, several GB of downloads and at least 35 GB free. Microsoft tools may require administrator permission and a restart. Tools remain available in the installation directory for later launches.
 
-Until completed, do not change Windows verification flags to true or present the installer as broadly compatible. Future version support requires analysis, adaptation and this testing process for each supported configuration.
+Changing the game or mod paths requires a new installation with the current launcher. There is no automatic updater or Windows uninstall entry. Version checks reject unsupported executables before conversion.

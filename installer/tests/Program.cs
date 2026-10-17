@@ -16,7 +16,7 @@ class Tests {
    }Console.WriteLine("PASS: x64 executable and all embedded resources verified without loading Windows code.");return 0;
   }
   if(args.Length>0&&args[0]=="--echo"){Console.Write(args[1]);return args.Length>2?int.Parse(args[2]):0;}
-  var temp=Path.Combine(Path.GetFullPath("work/windows-installer/tests"),"igobygod-tests-"+Guid.NewGuid());Directory.CreateDirectory(temp);
+  var temp=Path.Combine(Path.GetTempPath(),"igobygod-tests-"+Guid.NewGuid());Directory.CreateDirectory(temp);
   try {
    if(Core.Quote("a b\\")!="\"a b\\\\\"")throw new Exception("trailing slash quoting");
    if(Core.Quote("a\"b")!="\"a\\\"b\"")throw new Exception("embedded quote escaping");
@@ -42,6 +42,8 @@ class Tests {
    if(echoed.Trim()!=childArgs[2])throw new Exception("process argument corruption");
    rejected=false;try{Core.Run(Environment.GetEnvironmentVariable("DOTNET_HOST_PATH") ?? "dotnet",new[]{childArgs[0],"--echo","failure","9"},new System.Collections.Generic.Dictionary<string,string>(),Path.Combine(temp,"process.log"));}catch(InvalidOperationException){rejected=true;}
    if(!rejected)throw new Exception("child process failure ignored");
+   rejected=false;try{Core.Run(Environment.GetEnvironmentVariable("DOTNET_HOST_PATH") ?? "dotnet",new[]{childArgs[0],"--echo","Setup stopped: generated animation failed verification","9"},new System.Collections.Generic.Dictionary<string,string>(),Path.Combine(temp,"detail.log"));}catch(InvalidOperationException e){rejected=e.Message=="Setup stopped: generated animation failed verification";}
+   if(!rejected)throw new Exception("actionable builder failure hidden");
    Console.WriteLine("PASS: quoted paths, embedded quotes, output containment, existing folders, empty-folder selection, owned retries, ZIP traversal, valid extraction, process arguments and failure exit codes.");return 0;
   }finally{Directory.Delete(temp,true);}
  }

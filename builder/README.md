@@ -2,7 +2,7 @@
 
 This source package rebuilds the Franklin mod from your own GTA V Legacy and Elden Ring installations. It contains installer scripts, conversion recipes and mod source code. It does not contain game models, textures, animations, sounds, fonts, maps, modified game archives, saved games, or a precompiled game-specific mod DLL.
 
-**Release status: validation candidate.** A complete local build and installation passed on macOS, followed by a launch test that loaded the mod and initialized its graphics renderer. All 35 installed files passed an independent integrity check. Interactive gameplay remains unverified. The package is not yet a broadly tested public release. `release.json` records each platform's build and gameplay status; the installer refuses unsupported game versions. Windows installation is enabled for preview testing. Native Windows installation and gameplay have not been verified. See `VALIDATION.json` for the completed checks.
+**Windows preview.** Full installation completed in a Windows 11 ARM64 VM using x64 tools. All 35 installed files passed integrity checks; reference asset and parameter comparisons passed. Windows gameplay on a supported GPU remains untested. The VM lacks the graphics feature level required by the base game. See `VALIDATION.json` for test results.
 
 ## What it preserves
 
@@ -13,9 +13,9 @@ Franklin's character and movement, guns and native damage, the weapon wheel, che
 The Windows setup app prepares the developer tools below automatically. Windows viewers only need to supply their installed games and follow the setup window.
 
 - Your own installed GTA V **Legacy** and Elden Ring. Enhanced GTA V is not supported by this converter.
-- Elden Ring executable file version **1.17.1.0**, with SHA-256 `1a3547101327f65d0c76da2f9190ac0aa66871ea42bae2aecc61e11a8b597891`. The exact executable has been checked on the original setup. Availability of this same hash across retail/Steam installations has not been established; the setup checks yours before writing anything. Do not patch or bypass that check.
+- Elden Ring executable file version **1.17.1.0**, with SHA-256 `1a3547101327f65d0c76da2f9190ac0aa66871ea42bae2aecc61e11a8b597891`. The exact executable has been checked on the original setup. Availability of this same hash across retail/Steam installations has not been established; the setup checks yours before writing anything.
 - Python **3.13**, Git, .NET SDK **8**, Rust with the `x86_64-pc-windows-msvc` target, Java **21**, and the Microsoft Visual C++ x64 runtime.
-- Windows: the Visual Studio C++ build tools, run from an **x64 Native Tools Command Prompt**.
+- Windows GUI: setup prepares the required tools. Developers building manually need the Visual Studio C++ build tools and an x64 developer shell.
 - macOS: CrossOver with **D3DMetal enabled** and an existing bottle that already runs Elden Ring, the Visual C++ runtime in that bottle, and `cargo-xwin` with its required LLVM tools. The bottle must map `Z:` to the macOS root. The Wine renderer expects D3DMetal; DXVK is not supported. The original environment uses CrossOver 26.3 (26.3.0.39832). A working CrossOver game installation is a prerequisite; this package does not install either game or CrossOver.
 - At least **16 GB of free build space**, plus space for the two games. Keep the download, tools and output in separate folders.
 
@@ -109,7 +109,7 @@ Roll, jump and lock-on retain your Elden Ring keybindings. The installer does no
 - Existing output or partial tools directory: choose a new empty folder; the builder avoids overwriting unrelated files.
 - Missing source archive, failed conversion or hash mismatch: the installation is not finalized. Preserve the terminal error when reporting the issue.
 - Low disk space: choose a new output folder on a drive with at least 16 GB free.
-- Graphics or gameplay problem: keep platform and build status separate. A successful compile does not establish gameplay compatibility.
+- Black screen at startup: check that the base game runs normally and the GPU supports DirectX 12 feature level 12.0. Parallels on Apple silicon is unsuitable for gameplay testing.
 
 Runtime diagnostic logs are in the completed local mod's `runtime/logs` folder. The private `install.local.json` records selected paths and payload hashes; do not include it in public uploads.
 
@@ -119,4 +119,4 @@ The installer first validates both game folders and the version-specific executa
 
 It then compiles the portable runtime against those generated headers. The runtime resolves its files relative to its DLL instead of depending on the author's drive paths. Only after every required output passes its checks does the installer move the complete build into the requested output folder.
 
-Created for **igobygod**, with AI-assisted implementation and review using OpenAI Codex. See `THIRD_PARTY_NOTICES.md` and the retained vendored notices. This is an unofficial mod project; game names identify the required installations, and their assets remain with the original rights holders.
+Created by **igobygod**. See `THIRD_PARTY_NOTICES.md` and the retained vendored notices. This is an unofficial mod project; game names identify the required installations, and their assets remain with the original rights holders.
